@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project default="dist">
+	<property name="version" value="2.0.1" />
+	<property name="aversion" value="2_0_1" />
+	<property name="archive" value="build/cti-dotnet-${aversion}" />
+	<property name="dirname" value="cti-dotnet-${version}" />
+	<property name="encoding" value="UTF-8" />
+
+	<target name="clean">
+		<delete dir="build" />
+	</target>
+	
+	<target name="dist">
+		<mkdir dir="build"/>
+		<filter token="version" value="${version}" />
+		<copy todir="build" filtering="true" encoding="${encoding}">
+			<fileset dir="." includes="README.md"/>
+		</copy>
+		<zip destfile="${archive}.zip">
+		  	<zipfileset dir="." prefix="${dirname}">
+		  		<exclude name="document.bat"/>
+		  		<exclude name="build.xml"/>
+		  		<exclude name="Sandcastle.txt"/>
+		  		<exclude name="build/**"/>
+		  		<exclude name="CTI2008/**"/>
+		  		<exclude name="CTI/*/bin/**"/>
+		  		<exclude name="CTI/*/obj/**"/>
+		  		<exclude name="CTI/**/*.suo"/>
+		  		<exclude name=".*"/>
+		  		<exclude name=".*/**"/>
+			<exclude name="README.md"/>
+			</zipfileset>
+		  	<zipfileset dir="CTI/CTI/bin/Release/Output" prefix="${dirname}/apidoc"/>
+		  	<zipfileset file="build/README.md" prefix="${dirname}"/>
+		</zip>
+	</target>
+	
+</project>

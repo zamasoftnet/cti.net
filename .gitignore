@@ -1,0 +1,13 @@
+bin/
+obj/
+build/
+*.pdf
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+packages/
+.vs/
+*.nupkg
+TestResults/
+test-config.json

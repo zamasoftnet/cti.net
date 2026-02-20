@@ -1,0 +1,7 @@
+
+"D:\Program Files (x86)\Sandcastle\ProductionTools\MRefBuilder.exe" CTI.dll /out:reflection.org
+"D:\Program Files (x86)\Sandcastle\ProductionTools\XslTransform.exe" reflection.org /xsl:ApplyPrototypeDocModel.xsl /xsl:AddGuidFilenames.xsl /out:reflection.xml
+"D:\Program Files (x86)\Sandcastle\ProductionTools\XslTransform.exe" reflection.xml /xsl:ReflectionToManifest.xsl /out:manifest.xml
+"D:\Program Files (x86)\Sandcastle\ProductionTools\BuildAssembler.exe" manifest.xml /config:sandcastle.config
+
+"D:\Program Files (x86)\Sandcastle\Examples\Sandcastle\build_Sandcastle.bat" prototype CTI html
