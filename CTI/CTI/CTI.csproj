@@ -8,7 +8,17 @@
     <Company>Zamasoft</Company>
     <Copyright>Copyright © Zamasoft 2013-2022</Copyright>
     <Description>CTI driver for Copper PDF document conversion server</Description>
+    <PackageId>Zamasoft.CTI</PackageId>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/zamasoftnet/cti.net</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/zamasoftnet/cti.net.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <Nullable>disable</Nullable>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
 </Project>

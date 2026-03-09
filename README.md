@@ -2,19 +2,29 @@
 
 Copper PDF 文書変換サーバーに接続するための.NETドライバ（C#, VB.NET等）
 
-バージョン: 2.0.1
+バージョン: 2.1.0
 
 ## 動作要件
 
-- .NET Framework 3.5以降
+- .NET Standard 2.0 以降（.NET Framework 4.6.1+ / .NET Core 2.0+ / .NET 5–9）
 
 ## インストール
 
-ビルド済みDLLを参照に追加するか、ソースからビルドしてください。
+### NuGet を使う方法（推奨）
 
-- .NET Framework 3.5の場合: `dll/3.5/CTI.dll` を参照に追加
-- .NET Framework 4.0の場合: `dll/4.0/CTI.dll` を参照に追加
-- ソースからビルドする場合: `CTI.sln` をVisual Studioで開いてビルド
+```bash
+dotnet add package Zamasoft.CTI
+```
+
+または `PackageReference` をプロジェクトファイルに追加:
+
+```xml
+<PackageReference Include="Zamasoft.CTI" Version="2.1.0" />
+```
+
+### ソースからビルドする方法
+
+`CTI/CTI.sln` をVisual Studio または `dotnet build` でビルドしてください。
 
 ## 基本的な使い方
 
@@ -86,14 +96,9 @@ End Using
 
 | パス | 説明 |
 |---|---|
-| `CTI/` | ソースとサンプルプログラム |
-| `dll/3.5/CTI.dll` | .NET 3.5向けDLL |
-| `dll/4.0/CTI.dll` | .NET 4.0向けDLL |
-
-## ドキュメント生成方法
-
-APIドキュメントは従来どおり Sandcastle を使用して生成できます。
-Sandcastle は更新停止が進んでいるため、将来的には DocFX などへの移行を検討しています。
+| `CTI/CTI/` | ライブラリ本体（netstandard2.0）|
+| `CTI/ConsoleExamples/` | C# サンプルプログラム |
+| `CTI/ConsoleExamplesVB/` | VB.NET サンプルプログラム |
 
 ## テストの実行方法
 
