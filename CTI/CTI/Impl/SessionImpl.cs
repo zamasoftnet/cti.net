@@ -396,10 +396,13 @@ namespace Zamasoft.CTI.Impl
                     // do nothing
                 }
             }
+            catch (ThreadInterruptedException)
+            {
+                // cancelled by Reset()
+            }
             finally
             {
                 this.buildThread = null;
-
             }
         }
 
@@ -453,8 +456,9 @@ namespace Zamasoft.CTI.Impl
 		    this.builder = null;
             if (this.buildThread != null)
             {
-                this.buildThread.Abort();
+                Thread t = this.buildThread;
                 this.buildThread = null;
+                t.Interrupt();
             }
         }
 
@@ -472,8 +476,10 @@ namespace Zamasoft.CTI.Impl
   		    this.state = 3;
             if (this.buildThread != null)
             {
-                this.buildThread.Abort();
+                // stream is already closed; the build thread will die from IOException
+                Thread t = this.buildThread;
                 this.buildThread = null;
+                t.Join(1000);
             }
         }
 
