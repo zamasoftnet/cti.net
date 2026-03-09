@@ -130,6 +130,12 @@ http://dl.cssj.jp/docs/copper/3.0/html/3423_ctip2_dotnet.html
 
 ## 変更履歴
 
+### v2.1.0 (2026/3/9)
+
+- .NET Framework 4.0 から .NET Standard 2.0 に移行（.NET 5–9 / Linux / macOS 対応）。
+- NuGet パッケージ（`Zamasoft.CTI`）として配布可能に。
+- `Thread.Abort()` を `Thread.Interrupt()` / `Join()` に置き換え（.NET Core 対応）。
+
 ### v2.0.1 (2015/04/09)
 
 - SSL/TLS対応
