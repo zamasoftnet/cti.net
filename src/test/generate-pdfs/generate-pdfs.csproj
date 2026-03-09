@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <!-- CTI library sources -->
+    <Compile Include="../../../CTI/CTI/Driver.cs" />
+    <Compile Include="../../../CTI/CTI/DriverManager.cs" />
+    <Compile Include="../../../CTI/CTI/Session.cs" />
+    <Compile Include="../../../CTI/CTI/TranscoderException.cs" />
+    <Compile Include="../../../CTI/CTI/Utils.cs" />
+    <Compile Include="../../../CTI/CTI/Impl/ContentProducer.cs" />
+    <Compile Include="../../../CTI/CTI/Impl/ContentProducerStream.cs" />
+    <Compile Include="../../../CTI/CTI/Impl/DriverImpl.cs" />
+    <Compile Include="../../../CTI/CTI/Impl/RequestConsumer.cs" />
+    <Compile Include="../../../CTI/CTI/Impl/RequestConsumerStream.cs" />
+    <Compile Include="../../../CTI/CTI/Impl/SessionImpl.cs" />
+    <Compile Include="../../../CTI/CTI/Message/MessageHandler.cs" />
+    <Compile Include="../../../CTI/CTI/Progress/ProgressListener.cs" />
+    <Compile Include="../../../CTI/CTI/Result/Builder.cs" />
+    <Compile Include="../../../CTI/CTI/Result/FileResults.cs" />
+    <Compile Include="../../../CTI/CTI/Result/Results.cs" />
+    <Compile Include="../../../CTI/CTI/Result/SingleResult.cs" />
+    <Compile Include="../../../CTI/CTI/Source/SourceInfo.cs" />
+    <Compile Include="../../../CTI/CTI/Source/SourceResolver.cs" />
+    <Compile Include="../../../CTI/CTI/Properties/AssemblyInfo.cs" />
+  </ItemGroup>
+</Project>
