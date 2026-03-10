@@ -1,0 +1,1293 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: Zamasoft.CTI
+  name: Zamasoft.CTI
+  href: api/Zamasoft.CTI.html
+  commentId: N:Zamasoft.CTI
+  fullName: Zamasoft.CTI
+  nameWithType: Zamasoft.CTI
+- uid: Zamasoft.CTI.AbortMode
+  name: AbortMode
+  href: api/Zamasoft.CTI.AbortMode.html
+  commentId: T:Zamasoft.CTI.AbortMode
+  fullName: Zamasoft.CTI.AbortMode
+  nameWithType: AbortMode
+- uid: Zamasoft.CTI.AbortMode.FORCE
+  name: FORCE
+  href: api/Zamasoft.CTI.AbortMode.html#Zamasoft_CTI_AbortMode_FORCE
+  commentId: F:Zamasoft.CTI.AbortMode.FORCE
+  fullName: Zamasoft.CTI.AbortMode.FORCE
+  nameWithType: AbortMode.FORCE
+- uid: Zamasoft.CTI.AbortMode.NORMAL
+  name: NORMAL
+  href: api/Zamasoft.CTI.AbortMode.html#Zamasoft_CTI_AbortMode_NORMAL
+  commentId: F:Zamasoft.CTI.AbortMode.NORMAL
+  fullName: Zamasoft.CTI.AbortMode.NORMAL
+  nameWithType: AbortMode.NORMAL
+- uid: Zamasoft.CTI.Driver
+  name: Driver
+  href: api/Zamasoft.CTI.Driver.html
+  commentId: T:Zamasoft.CTI.Driver
+  fullName: Zamasoft.CTI.Driver
+  nameWithType: Driver
+- uid: Zamasoft.CTI.Driver.getSession(System.Uri,System.Collections.Hashtable)
+  name: getSession(Uri, Hashtable)
+  href: api/Zamasoft.CTI.Driver.html#Zamasoft_CTI_Driver_getSession_System_Uri_System_Collections_Hashtable_
+  commentId: M:Zamasoft.CTI.Driver.getSession(System.Uri,System.Collections.Hashtable)
+  fullName: Zamasoft.CTI.Driver.getSession(System.Uri, System.Collections.Hashtable)
+  nameWithType: Driver.getSession(Uri, Hashtable)
+- uid: Zamasoft.CTI.Driver.getSession*
+  name: getSession
+  href: api/Zamasoft.CTI.Driver.html#Zamasoft_CTI_Driver_getSession_
+  commentId: Overload:Zamasoft.CTI.Driver.getSession
+  isSpec: "True"
+  fullName: Zamasoft.CTI.Driver.getSession
+  nameWithType: Driver.getSession
+- uid: Zamasoft.CTI.DriverManager
+  name: DriverManager
+  href: api/Zamasoft.CTI.DriverManager.html
+  commentId: T:Zamasoft.CTI.DriverManager
+  fullName: Zamasoft.CTI.DriverManager
+  nameWithType: DriverManager
+- uid: Zamasoft.CTI.DriverManager.getDriver(System.Uri)
+  name: getDriver(Uri)
+  href: api/Zamasoft.CTI.DriverManager.html#Zamasoft_CTI_DriverManager_getDriver_System_Uri_
+  commentId: M:Zamasoft.CTI.DriverManager.getDriver(System.Uri)
+  fullName: Zamasoft.CTI.DriverManager.getDriver(System.Uri)
+  nameWithType: DriverManager.getDriver(Uri)
+- uid: Zamasoft.CTI.DriverManager.getDriver*
+  name: getDriver
+  href: api/Zamasoft.CTI.DriverManager.html#Zamasoft_CTI_DriverManager_getDriver_
+  commentId: Overload:Zamasoft.CTI.DriverManager.getDriver
+  isSpec: "True"
+  fullName: Zamasoft.CTI.DriverManager.getDriver
+  nameWithType: DriverManager.getDriver
+- uid: Zamasoft.CTI.DriverManager.getSession(System.Uri,System.Collections.Hashtable)
+  name: getSession(Uri, Hashtable)
+  href: api/Zamasoft.CTI.DriverManager.html#Zamasoft_CTI_DriverManager_getSession_System_Uri_System_Collections_Hashtable_
+  commentId: M:Zamasoft.CTI.DriverManager.getSession(System.Uri,System.Collections.Hashtable)
+  fullName: Zamasoft.CTI.DriverManager.getSession(System.Uri, System.Collections.Hashtable)
+  nameWithType: DriverManager.getSession(Uri, Hashtable)
+- uid: Zamasoft.CTI.DriverManager.getSession(System.Uri,System.String,System.String)
+  name: getSession(Uri, string, string)
+  href: api/Zamasoft.CTI.DriverManager.html#Zamasoft_CTI_DriverManager_getSession_System_Uri_System_String_System_String_
+  commentId: M:Zamasoft.CTI.DriverManager.getSession(System.Uri,System.String,System.String)
+  name.vb: getSession(Uri, String, String)
+  fullName: Zamasoft.CTI.DriverManager.getSession(System.Uri, string, string)
+  fullName.vb: Zamasoft.CTI.DriverManager.getSession(System.Uri, String, String)
+  nameWithType: DriverManager.getSession(Uri, string, string)
+  nameWithType.vb: DriverManager.getSession(Uri, String, String)
+- uid: Zamasoft.CTI.DriverManager.getSession*
+  name: getSession
+  href: api/Zamasoft.CTI.DriverManager.html#Zamasoft_CTI_DriverManager_getSession_
+  commentId: Overload:Zamasoft.CTI.DriverManager.getSession
+  isSpec: "True"
+  fullName: Zamasoft.CTI.DriverManager.getSession
+  nameWithType: DriverManager.getSession
+- uid: Zamasoft.CTI.Message
+  name: Zamasoft.CTI.Message
+  href: api/Zamasoft.CTI.Message.html
+  commentId: N:Zamasoft.CTI.Message
+  fullName: Zamasoft.CTI.Message
+  nameWithType: Zamasoft.CTI.Message
+- uid: Zamasoft.CTI.Message.MessageHandler
+  name: MessageHandler
+  href: api/Zamasoft.CTI.Message.MessageHandler.html
+  commentId: T:Zamasoft.CTI.Message.MessageHandler
+  fullName: Zamasoft.CTI.Message.MessageHandler
+  nameWithType: MessageHandler
+- uid: Zamasoft.CTI.Message.MessageHandler.Message(System.Int16,System.String[],System.String)
+  name: Message(short, string[], string)
+  href: api/Zamasoft.CTI.Message.MessageHandler.html#Zamasoft_CTI_Message_MessageHandler_Message_System_Int16_System_String___System_String_
+  commentId: M:Zamasoft.CTI.Message.MessageHandler.Message(System.Int16,System.String[],System.String)
+  name.vb: Message(Short, String(), String)
+  fullName: Zamasoft.CTI.Message.MessageHandler.Message(short, string[], string)
+  fullName.vb: Zamasoft.CTI.Message.MessageHandler.Message(Short, String(), String)
+  nameWithType: MessageHandler.Message(short, string[], string)
+  nameWithType.vb: MessageHandler.Message(Short, String(), String)
+- uid: Zamasoft.CTI.Message.MessageHandler.Message*
+  name: Message
+  href: api/Zamasoft.CTI.Message.MessageHandler.html#Zamasoft_CTI_Message_MessageHandler_Message_
+  commentId: Overload:Zamasoft.CTI.Message.MessageHandler.Message
+  isSpec: "True"
+  fullName: Zamasoft.CTI.Message.MessageHandler.Message
+  nameWithType: MessageHandler.Message
+- uid: Zamasoft.CTI.Progress
+  name: Zamasoft.CTI.Progress
+  href: api/Zamasoft.CTI.Progress.html
+  commentId: N:Zamasoft.CTI.Progress
+  fullName: Zamasoft.CTI.Progress
+  nameWithType: Zamasoft.CTI.Progress
+- uid: Zamasoft.CTI.Progress.ProgressListener
+  name: ProgressListener
+  href: api/Zamasoft.CTI.Progress.ProgressListener.html
+  commentId: T:Zamasoft.CTI.Progress.ProgressListener
+  fullName: Zamasoft.CTI.Progress.ProgressListener
+  nameWithType: ProgressListener
+- uid: Zamasoft.CTI.Progress.ProgressListener.Progress(System.Int64)
+  name: Progress(long)
+  href: api/Zamasoft.CTI.Progress.ProgressListener.html#Zamasoft_CTI_Progress_ProgressListener_Progress_System_Int64_
+  commentId: M:Zamasoft.CTI.Progress.ProgressListener.Progress(System.Int64)
+  name.vb: Progress(Long)
+  fullName: Zamasoft.CTI.Progress.ProgressListener.Progress(long)
+  fullName.vb: Zamasoft.CTI.Progress.ProgressListener.Progress(Long)
+  nameWithType: ProgressListener.Progress(long)
+  nameWithType.vb: ProgressListener.Progress(Long)
+- uid: Zamasoft.CTI.Progress.ProgressListener.Progress*
+  name: Progress
+  href: api/Zamasoft.CTI.Progress.ProgressListener.html#Zamasoft_CTI_Progress_ProgressListener_Progress_
+  commentId: Overload:Zamasoft.CTI.Progress.ProgressListener.Progress
+  isSpec: "True"
+  fullName: Zamasoft.CTI.Progress.ProgressListener.Progress
+  nameWithType: ProgressListener.Progress
+- uid: Zamasoft.CTI.Progress.ProgressListener.SourceLength(System.Int64)
+  name: SourceLength(long)
+  href: api/Zamasoft.CTI.Progress.ProgressListener.html#Zamasoft_CTI_Progress_ProgressListener_SourceLength_System_Int64_
+  commentId: M:Zamasoft.CTI.Progress.ProgressListener.SourceLength(System.Int64)
+  name.vb: SourceLength(Long)
+  fullName: Zamasoft.CTI.Progress.ProgressListener.SourceLength(long)
+  fullName.vb: Zamasoft.CTI.Progress.ProgressListener.SourceLength(Long)
+  nameWithType: ProgressListener.SourceLength(long)
+  nameWithType.vb: ProgressListener.SourceLength(Long)
+- uid: Zamasoft.CTI.Progress.ProgressListener.SourceLength*
+  name: SourceLength
+  href: api/Zamasoft.CTI.Progress.ProgressListener.html#Zamasoft_CTI_Progress_ProgressListener_SourceLength_
+  commentId: Overload:Zamasoft.CTI.Progress.ProgressListener.SourceLength
+  isSpec: "True"
+  fullName: Zamasoft.CTI.Progress.ProgressListener.SourceLength
+  nameWithType: ProgressListener.SourceLength
+- uid: Zamasoft.CTI.Result
+  name: Zamasoft.CTI.Result
+  href: api/Zamasoft.CTI.Result.html
+  commentId: N:Zamasoft.CTI.Result
+  fullName: Zamasoft.CTI.Result
+  nameWithType: Zamasoft.CTI.Result
+- uid: Zamasoft.CTI.Result.Builder
+  name: Builder
+  href: api/Zamasoft.CTI.Result.Builder.html
+  commentId: T:Zamasoft.CTI.Result.Builder
+  fullName: Zamasoft.CTI.Result.Builder
+  nameWithType: Builder
+- uid: Zamasoft.CTI.Result.Builder.#ctor(System.IO.Stream)
+  name: Builder(Stream)
+  href: api/Zamasoft.CTI.Result.Builder.html#Zamasoft_CTI_Result_Builder__ctor_System_IO_Stream_
+  commentId: M:Zamasoft.CTI.Result.Builder.#ctor(System.IO.Stream)
+  name.vb: New(Stream)
+  fullName: Zamasoft.CTI.Result.Builder.Builder(System.IO.Stream)
+  fullName.vb: Zamasoft.CTI.Result.Builder.New(System.IO.Stream)
+  nameWithType: Builder.Builder(Stream)
+  nameWithType.vb: Builder.New(Stream)
+- uid: Zamasoft.CTI.Result.Builder.#ctor(System.IO.Stream,System.Int32,System.Int32,System.Int32)
+  name: Builder(Stream, int, int, int)
+  href: api/Zamasoft.CTI.Result.Builder.html#Zamasoft_CTI_Result_Builder__ctor_System_IO_Stream_System_Int32_System_Int32_System_Int32_
+  commentId: M:Zamasoft.CTI.Result.Builder.#ctor(System.IO.Stream,System.Int32,System.Int32,System.Int32)
+  name.vb: New(Stream, Integer, Integer, Integer)
+  fullName: Zamasoft.CTI.Result.Builder.Builder(System.IO.Stream, int, int, int)
+  fullName.vb: Zamasoft.CTI.Result.Builder.New(System.IO.Stream, Integer, Integer, Integer)
+  nameWithType: Builder.Builder(Stream, int, int, int)
+  nameWithType.vb: Builder.New(Stream, Integer, Integer, Integer)
+- uid: Zamasoft.CTI.Result.Builder.#ctor*
+  name: Builder
+  href: api/Zamasoft.CTI.Result.Builder.html#Zamasoft_CTI_Result_Builder__ctor_
+  commentId: Overload:Zamasoft.CTI.Result.Builder.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Zamasoft.CTI.Result.Builder.Builder
+  fullName.vb: Zamasoft.CTI.Result.Builder.New
+  nameWithType: Builder.Builder
+  nameWithType.vb: Builder.New
+- uid: Zamasoft.CTI.Result.Builder.AddBlock
+  name: AddBlock()
+  href: api/Zamasoft.CTI.Result.Builder.html#Zamasoft_CTI_Result_Builder_AddBlock
+  commentId: M:Zamasoft.CTI.Result.Builder.AddBlock
+  fullName: Zamasoft.CTI.Result.Builder.AddBlock()
+  nameWithType: Builder.AddBlock()
+- uid: Zamasoft.CTI.Result.Builder.AddBlock*
+  name: AddBlock
+  href: api/Zamasoft.CTI.Result.Builder.html#Zamasoft_CTI_Result_Builder_AddBlock_
+  commentId: Overload:Zamasoft.CTI.Result.Builder.AddBlock
+  isSpec: "True"
+  fullName: Zamasoft.CTI.Result.Builder.AddBlock
+  nameWithType: Builder.AddBlock
+- uid: Zamasoft.CTI.Result.Builder.Block
+  name: Builder.Block
+  href: api/Zamasoft.CTI.Result.Builder.Block.html
+  commentId: T:Zamasoft.CTI.Result.Builder.Block
+  fullName: Zamasoft.CTI.Result.Builder.Block
+  nameWithType: Builder.Block
+- uid: Zamasoft.CTI.Result.Builder.Block.#ctor(Zamasoft.CTI.Result.Builder,System.Int32)
+  name: Block(Builder, int)
+  href: api/Zamasoft.CTI.Result.Builder.Block.html#Zamasoft_CTI_Result_Builder_Block__ctor_Zamasoft_CTI_Result_Builder_System_Int32_
+  commentId: M:Zamasoft.CTI.Result.Builder.Block.#ctor(Zamasoft.CTI.Result.Builder,System.Int32)
+  name.vb: New(Builder, Integer)
+  fullName: Zamasoft.CTI.Result.Builder.Block.Block(Zamasoft.CTI.Result.Builder, int)
+  fullName.vb: Zamasoft.CTI.Result.Builder.Block.New(Zamasoft.CTI.Result.Builder, Integer)
+  nameWithType: Builder.Block.Block(Builder, int)
+  nameWithType.vb: Builder.Block.New(Builder, Integer)
+- uid: Zamasoft.CTI.Result.Builder.Block.#ctor*
+  name: Block
+  href: api/Zamasoft.CTI.Result.Builder.Block.html#Zamasoft_CTI_Result_Builder_Block__ctor_
+  commentId: Overload:Zamasoft.CTI.Result.Builder.Block.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Zamasoft.CTI.Result.Builder.Block.Block
+  fullName.vb: Zamasoft.CTI.Result.Builder.Block.New
+  nameWithType: Builder.Block.Block
+  nameWithType.vb: Builder.Block.New
+- uid: Zamasoft.CTI.Result.Builder.Block.close
+  name: close()
+  href: api/Zamasoft.CTI.Result.Builder.Block.html#Zamasoft_CTI_Result_Builder_Block_close
+  commentId: M:Zamasoft.CTI.Result.Builder.Block.close
+  fullName: Zamasoft.CTI.Result.Builder.Block.close()
+  nameWithType: Builder.Block.close()
+- uid: Zamasoft.CTI.Result.Builder.Block.close*
+  name: close
+  href: api/Zamasoft.CTI.Result.Builder.Block.html#Zamasoft_CTI_Result_Builder_Block_close_
+  commentId: Overload:Zamasoft.CTI.Result.Builder.Block.close
+  isSpec: "True"
+  fullName: Zamasoft.CTI.Result.Builder.Block.close
+  nameWithType: Builder.Block.close
+- uid: Zamasoft.CTI.Result.Builder.Block.dispose
+  name: dispose()
+  href: api/Zamasoft.CTI.Result.Builder.Block.html#Zamasoft_CTI_Result_Builder_Block_dispose
+  commentId: M:Zamasoft.CTI.Result.Builder.Block.dispose
+  fullName: Zamasoft.CTI.Result.Builder.Block.dispose()
+  nameWithType: Builder.Block.dispose()
+- uid: Zamasoft.CTI.Result.Builder.Block.dispose*
+  name: dispose
+  href: api/Zamasoft.CTI.Result.Builder.Block.html#Zamasoft_CTI_Result_Builder_Block_dispose_
+  commentId: Overload:Zamasoft.CTI.Result.Builder.Block.dispose
+  isSpec: "True"
+  fullName: Zamasoft.CTI.Result.Builder.Block.dispose
+  nameWithType: Builder.Block.dispose
+- uid: Zamasoft.CTI.Result.Builder.Block.getId
+  name: getId()
+  href: api/Zamasoft.CTI.Result.Builder.Block.html#Zamasoft_CTI_Result_Builder_Block_getId
+  commentId: M:Zamasoft.CTI.Result.Builder.Block.getId
+  fullName: Zamasoft.CTI.Result.Builder.Block.getId()
+  nameWithType: Builder.Block.getId()
+- uid: Zamasoft.CTI.Result.Builder.Block.getId*
+  name: getId
+  href: api/Zamasoft.CTI.Result.Builder.Block.html#Zamasoft_CTI_Result_Builder_Block_getId_
+  commentId: Overload:Zamasoft.CTI.Result.Builder.Block.getId
+  isSpec: "True"
+  fullName: Zamasoft.CTI.Result.Builder.Block.getId
+  nameWithType: Builder.Block.getId
+- uid: Zamasoft.CTI.Result.Builder.Block.getLength
+  name: getLength()
+  href: api/Zamasoft.CTI.Result.Builder.Block.html#Zamasoft_CTI_Result_Builder_Block_getLength
+  commentId: M:Zamasoft.CTI.Result.Builder.Block.getLength
+  fullName: Zamasoft.CTI.Result.Builder.Block.getLength()
+  nameWithType: Builder.Block.getLength()
+- uid: Zamasoft.CTI.Result.Builder.Block.getLength*
+  name: getLength
+  href: api/Zamasoft.CTI.Result.Builder.Block.html#Zamasoft_CTI_Result_Builder_Block_getLength_
+  commentId: Overload:Zamasoft.CTI.Result.Builder.Block.getLength
+  isSpec: "True"
+  fullName: Zamasoft.CTI.Result.Builder.Block.getLength
+  nameWithType: Builder.Block.getLength
+- uid: Zamasoft.CTI.Result.Builder.Block.next
+  name: next
+  href: api/Zamasoft.CTI.Result.Builder.Block.html#Zamasoft_CTI_Result_Builder_Block_next
+  commentId: F:Zamasoft.CTI.Result.Builder.Block.next
+  fullName: Zamasoft.CTI.Result.Builder.Block.next
+  nameWithType: Builder.Block.next
+- uid: Zamasoft.CTI.Result.Builder.Block.prev
+  name: prev
+  href: api/Zamasoft.CTI.Result.Builder.Block.html#Zamasoft_CTI_Result_Builder_Block_prev
+  commentId: F:Zamasoft.CTI.Result.Builder.Block.prev
+  fullName: Zamasoft.CTI.Result.Builder.Block.prev
+  nameWithType: Builder.Block.prev
+- uid: Zamasoft.CTI.Result.Builder.Block.write(System.Byte[],System.Int32,System.Int32)
+  name: write(byte[], int, int)
+  href: api/Zamasoft.CTI.Result.Builder.Block.html#Zamasoft_CTI_Result_Builder_Block_write_System_Byte___System_Int32_System_Int32_
+  commentId: M:Zamasoft.CTI.Result.Builder.Block.write(System.Byte[],System.Int32,System.Int32)
+  name.vb: write(Byte(), Integer, Integer)
+  fullName: Zamasoft.CTI.Result.Builder.Block.write(byte[], int, int)
+  fullName.vb: Zamasoft.CTI.Result.Builder.Block.write(Byte(), Integer, Integer)
+  nameWithType: Builder.Block.write(byte[], int, int)
+  nameWithType.vb: Builder.Block.write(Byte(), Integer, Integer)
+- uid: Zamasoft.CTI.Result.Builder.Block.write*
+  name: write
+  href: api/Zamasoft.CTI.Result.Builder.Block.html#Zamasoft_CTI_Result_Builder_Block_write_
+  commentId: Overload:Zamasoft.CTI.Result.Builder.Block.write
+  isSpec: "True"
+  fullName: Zamasoft.CTI.Result.Builder.Block.write
+  nameWithType: Builder.Block.write
+- uid: Zamasoft.CTI.Result.Builder.Block.writeTo(System.IO.Stream)
+  name: writeTo(Stream)
+  href: api/Zamasoft.CTI.Result.Builder.Block.html#Zamasoft_CTI_Result_Builder_Block_writeTo_System_IO_Stream_
+  commentId: M:Zamasoft.CTI.Result.Builder.Block.writeTo(System.IO.Stream)
+  fullName: Zamasoft.CTI.Result.Builder.Block.writeTo(System.IO.Stream)
+  nameWithType: Builder.Block.writeTo(Stream)
+- uid: Zamasoft.CTI.Result.Builder.Block.writeTo*
+  name: writeTo
+  href: api/Zamasoft.CTI.Result.Builder.Block.html#Zamasoft_CTI_Result_Builder_Block_writeTo_
+  commentId: Overload:Zamasoft.CTI.Result.Builder.Block.writeTo
+  isSpec: "True"
+  fullName: Zamasoft.CTI.Result.Builder.Block.writeTo
+  nameWithType: Builder.Block.writeTo
+- uid: Zamasoft.CTI.Result.Builder.CloseBlock(System.Int32)
+  name: CloseBlock(int)
+  href: api/Zamasoft.CTI.Result.Builder.html#Zamasoft_CTI_Result_Builder_CloseBlock_System_Int32_
+  commentId: M:Zamasoft.CTI.Result.Builder.CloseBlock(System.Int32)
+  name.vb: CloseBlock(Integer)
+  fullName: Zamasoft.CTI.Result.Builder.CloseBlock(int)
+  fullName.vb: Zamasoft.CTI.Result.Builder.CloseBlock(Integer)
+  nameWithType: Builder.CloseBlock(int)
+  nameWithType.vb: Builder.CloseBlock(Integer)
+- uid: Zamasoft.CTI.Result.Builder.CloseBlock*
+  name: CloseBlock
+  href: api/Zamasoft.CTI.Result.Builder.html#Zamasoft_CTI_Result_Builder_CloseBlock_
+  commentId: Overload:Zamasoft.CTI.Result.Builder.CloseBlock
+  isSpec: "True"
+  fullName: Zamasoft.CTI.Result.Builder.CloseBlock
+  nameWithType: Builder.CloseBlock
+- uid: Zamasoft.CTI.Result.Builder.Dispose
+  name: Dispose()
+  href: api/Zamasoft.CTI.Result.Builder.html#Zamasoft_CTI_Result_Builder_Dispose
+  commentId: M:Zamasoft.CTI.Result.Builder.Dispose
+  fullName: Zamasoft.CTI.Result.Builder.Dispose()
+  nameWithType: Builder.Dispose()
+- uid: Zamasoft.CTI.Result.Builder.Dispose*
+  name: Dispose
+  href: api/Zamasoft.CTI.Result.Builder.html#Zamasoft_CTI_Result_Builder_Dispose_
+  commentId: Overload:Zamasoft.CTI.Result.Builder.Dispose
+  isSpec: "True"
+  fullName: Zamasoft.CTI.Result.Builder.Dispose
+  nameWithType: Builder.Dispose
+- uid: Zamasoft.CTI.Result.Builder.Finish
+  name: Finish()
+  href: api/Zamasoft.CTI.Result.Builder.html#Zamasoft_CTI_Result_Builder_Finish
+  commentId: M:Zamasoft.CTI.Result.Builder.Finish
+  fullName: Zamasoft.CTI.Result.Builder.Finish()
+  nameWithType: Builder.Finish()
+- uid: Zamasoft.CTI.Result.Builder.Finish*
+  name: Finish
+  href: api/Zamasoft.CTI.Result.Builder.html#Zamasoft_CTI_Result_Builder_Finish_
+  commentId: Overload:Zamasoft.CTI.Result.Builder.Finish
+  isSpec: "True"
+  fullName: Zamasoft.CTI.Result.Builder.Finish
+  nameWithType: Builder.Finish
+- uid: Zamasoft.CTI.Result.Builder.Info
+  name: Info
+  href: api/Zamasoft.CTI.Result.Builder.html#Zamasoft_CTI_Result_Builder_Info
+  commentId: P:Zamasoft.CTI.Result.Builder.Info
+  fullName: Zamasoft.CTI.Result.Builder.Info
+  nameWithType: Builder.Info
+- uid: Zamasoft.CTI.Result.Builder.Info*
+  name: Info
+  href: api/Zamasoft.CTI.Result.Builder.html#Zamasoft_CTI_Result_Builder_Info_
+  commentId: Overload:Zamasoft.CTI.Result.Builder.Info
+  isSpec: "True"
+  fullName: Zamasoft.CTI.Result.Builder.Info
+  nameWithType: Builder.Info
+- uid: Zamasoft.CTI.Result.Builder.InsertBlockBefore(System.Int32)
+  name: InsertBlockBefore(int)
+  href: api/Zamasoft.CTI.Result.Builder.html#Zamasoft_CTI_Result_Builder_InsertBlockBefore_System_Int32_
+  commentId: M:Zamasoft.CTI.Result.Builder.InsertBlockBefore(System.Int32)
+  name.vb: InsertBlockBefore(Integer)
+  fullName: Zamasoft.CTI.Result.Builder.InsertBlockBefore(int)
+  fullName.vb: Zamasoft.CTI.Result.Builder.InsertBlockBefore(Integer)
+  nameWithType: Builder.InsertBlockBefore(int)
+  nameWithType.vb: Builder.InsertBlockBefore(Integer)
+- uid: Zamasoft.CTI.Result.Builder.InsertBlockBefore*
+  name: InsertBlockBefore
+  href: api/Zamasoft.CTI.Result.Builder.html#Zamasoft_CTI_Result_Builder_InsertBlockBefore_
+  commentId: Overload:Zamasoft.CTI.Result.Builder.InsertBlockBefore
+  isSpec: "True"
+  fullName: Zamasoft.CTI.Result.Builder.InsertBlockBefore
+  nameWithType: Builder.InsertBlockBefore
+- uid: Zamasoft.CTI.Result.Builder.Write(System.Byte[],System.Int32,System.Int32)
+  name: Write(byte[], int, int)
+  href: api/Zamasoft.CTI.Result.Builder.html#Zamasoft_CTI_Result_Builder_Write_System_Byte___System_Int32_System_Int32_
+  commentId: M:Zamasoft.CTI.Result.Builder.Write(System.Byte[],System.Int32,System.Int32)
+  name.vb: Write(Byte(), Integer, Integer)
+  fullName: Zamasoft.CTI.Result.Builder.Write(byte[], int, int)
+  fullName.vb: Zamasoft.CTI.Result.Builder.Write(Byte(), Integer, Integer)
+  nameWithType: Builder.Write(byte[], int, int)
+  nameWithType.vb: Builder.Write(Byte(), Integer, Integer)
+- uid: Zamasoft.CTI.Result.Builder.Write(System.Int32,System.Byte[],System.Int32,System.Int32)
+  name: Write(int, byte[], int, int)
+  href: api/Zamasoft.CTI.Result.Builder.html#Zamasoft_CTI_Result_Builder_Write_System_Int32_System_Byte___System_Int32_System_Int32_
+  commentId: M:Zamasoft.CTI.Result.Builder.Write(System.Int32,System.Byte[],System.Int32,System.Int32)
+  name.vb: Write(Integer, Byte(), Integer, Integer)
+  fullName: Zamasoft.CTI.Result.Builder.Write(int, byte[], int, int)
+  fullName.vb: Zamasoft.CTI.Result.Builder.Write(Integer, Byte(), Integer, Integer)
+  nameWithType: Builder.Write(int, byte[], int, int)
+  nameWithType.vb: Builder.Write(Integer, Byte(), Integer, Integer)
+- uid: Zamasoft.CTI.Result.Builder.Write*
+  name: Write
+  href: api/Zamasoft.CTI.Result.Builder.html#Zamasoft_CTI_Result_Builder_Write_
+  commentId: Overload:Zamasoft.CTI.Result.Builder.Write
+  isSpec: "True"
+  fullName: Zamasoft.CTI.Result.Builder.Write
+  nameWithType: Builder.Write
+- uid: Zamasoft.CTI.Result.Builder.file
+  name: file
+  href: api/Zamasoft.CTI.Result.Builder.html#Zamasoft_CTI_Result_Builder_file
+  commentId: F:Zamasoft.CTI.Result.Builder.file
+  fullName: Zamasoft.CTI.Result.Builder.file
+  nameWithType: Builder.file
+- uid: Zamasoft.CTI.Result.Builder.first
+  name: first
+  href: api/Zamasoft.CTI.Result.Builder.html#Zamasoft_CTI_Result_Builder_first
+  commentId: F:Zamasoft.CTI.Result.Builder.first
+  fullName: Zamasoft.CTI.Result.Builder.first
+  nameWithType: Builder.first
+- uid: Zamasoft.CTI.Result.Builder.frgs
+  name: frgs
+  href: api/Zamasoft.CTI.Result.Builder.html#Zamasoft_CTI_Result_Builder_frgs
+  commentId: F:Zamasoft.CTI.Result.Builder.frgs
+  fullName: Zamasoft.CTI.Result.Builder.frgs
+  nameWithType: Builder.frgs
+- uid: Zamasoft.CTI.Result.Builder.getBlock(System.Int32)
+  name: getBlock(int)
+  href: api/Zamasoft.CTI.Result.Builder.html#Zamasoft_CTI_Result_Builder_getBlock_System_Int32_
+  commentId: M:Zamasoft.CTI.Result.Builder.getBlock(System.Int32)
+  name.vb: getBlock(Integer)
+  fullName: Zamasoft.CTI.Result.Builder.getBlock(int)
+  fullName.vb: Zamasoft.CTI.Result.Builder.getBlock(Integer)
+  nameWithType: Builder.getBlock(int)
+  nameWithType.vb: Builder.getBlock(Integer)
+- uid: Zamasoft.CTI.Result.Builder.getBlock*
+  name: getBlock
+  href: api/Zamasoft.CTI.Result.Builder.html#Zamasoft_CTI_Result_Builder_getBlock_
+  commentId: Overload:Zamasoft.CTI.Result.Builder.getBlock
+  isSpec: "True"
+  fullName: Zamasoft.CTI.Result.Builder.getBlock
+  nameWithType: Builder.getBlock
+- uid: Zamasoft.CTI.Result.Builder.info
+  name: info
+  href: api/Zamasoft.CTI.Result.Builder.html#Zamasoft_CTI_Result_Builder_info
+  commentId: F:Zamasoft.CTI.Result.Builder.info
+  fullName: Zamasoft.CTI.Result.Builder.info
+  nameWithType: Builder.info
+- uid: Zamasoft.CTI.Result.Builder.last
+  name: last
+  href: api/Zamasoft.CTI.Result.Builder.html#Zamasoft_CTI_Result_Builder_last
+  commentId: F:Zamasoft.CTI.Result.Builder.last
+  fullName: Zamasoft.CTI.Result.Builder.last
+  nameWithType: Builder.last
+- uid: Zamasoft.CTI.Result.Builder.length
+  name: length
+  href: api/Zamasoft.CTI.Result.Builder.html#Zamasoft_CTI_Result_Builder_length
+  commentId: F:Zamasoft.CTI.Result.Builder.length
+  fullName: Zamasoft.CTI.Result.Builder.length
+  nameWithType: Builder.length
+- uid: Zamasoft.CTI.Result.Builder.nextId
+  name: nextId()
+  href: api/Zamasoft.CTI.Result.Builder.html#Zamasoft_CTI_Result_Builder_nextId
+  commentId: M:Zamasoft.CTI.Result.Builder.nextId
+  fullName: Zamasoft.CTI.Result.Builder.nextId()
+  nameWithType: Builder.nextId()
+- uid: Zamasoft.CTI.Result.Builder.nextId*
+  name: nextId
+  href: api/Zamasoft.CTI.Result.Builder.html#Zamasoft_CTI_Result_Builder_nextId_
+  commentId: Overload:Zamasoft.CTI.Result.Builder.nextId
+  isSpec: "True"
+  fullName: Zamasoft.CTI.Result.Builder.nextId
+  nameWithType: Builder.nextId
+- uid: Zamasoft.CTI.Result.Builder.onMemory
+  name: onMemory
+  href: api/Zamasoft.CTI.Result.Builder.html#Zamasoft_CTI_Result_Builder_onMemory
+  commentId: F:Zamasoft.CTI.Result.Builder.onMemory
+  fullName: Zamasoft.CTI.Result.Builder.onMemory
+  nameWithType: Builder.onMemory
+- uid: Zamasoft.CTI.Result.Builder.output
+  name: output
+  href: api/Zamasoft.CTI.Result.Builder.html#Zamasoft_CTI_Result_Builder_output
+  commentId: F:Zamasoft.CTI.Result.Builder.output
+  fullName: Zamasoft.CTI.Result.Builder.output
+  nameWithType: Builder.output
+- uid: Zamasoft.CTI.Result.Builder.putBlock(System.Int32,Zamasoft.CTI.Result.Builder.Block)
+  name: putBlock(int, Block)
+  href: api/Zamasoft.CTI.Result.Builder.html#Zamasoft_CTI_Result_Builder_putBlock_System_Int32_Zamasoft_CTI_Result_Builder_Block_
+  commentId: M:Zamasoft.CTI.Result.Builder.putBlock(System.Int32,Zamasoft.CTI.Result.Builder.Block)
+  name.vb: putBlock(Integer, Block)
+  fullName: Zamasoft.CTI.Result.Builder.putBlock(int, Zamasoft.CTI.Result.Builder.Block)
+  fullName.vb: Zamasoft.CTI.Result.Builder.putBlock(Integer, Zamasoft.CTI.Result.Builder.Block)
+  nameWithType: Builder.putBlock(int, Builder.Block)
+  nameWithType.vb: Builder.putBlock(Integer, Builder.Block)
+- uid: Zamasoft.CTI.Result.Builder.putBlock*
+  name: putBlock
+  href: api/Zamasoft.CTI.Result.Builder.html#Zamasoft_CTI_Result_Builder_putBlock_
+  commentId: Overload:Zamasoft.CTI.Result.Builder.putBlock
+  isSpec: "True"
+  fullName: Zamasoft.CTI.Result.Builder.putBlock
+  nameWithType: Builder.putBlock
+- uid: Zamasoft.CTI.Result.Builder.raf
+  name: raf
+  href: api/Zamasoft.CTI.Result.Builder.html#Zamasoft_CTI_Result_Builder_raf
+  commentId: F:Zamasoft.CTI.Result.Builder.raf
+  fullName: Zamasoft.CTI.Result.Builder.raf
+  nameWithType: Builder.raf
+- uid: Zamasoft.CTI.Result.Builder.segment
+  name: segment
+  href: api/Zamasoft.CTI.Result.Builder.html#Zamasoft_CTI_Result_Builder_segment
+  commentId: F:Zamasoft.CTI.Result.Builder.segment
+  fullName: Zamasoft.CTI.Result.Builder.segment
+  nameWithType: Builder.segment
+- uid: Zamasoft.CTI.Result.FileResults
+  name: FileResults
+  href: api/Zamasoft.CTI.Result.FileResults.html
+  commentId: T:Zamasoft.CTI.Result.FileResults
+  fullName: Zamasoft.CTI.Result.FileResults
+  nameWithType: FileResults
+- uid: Zamasoft.CTI.Result.FileResults.#ctor(System.String,System.String)
+  name: FileResults(string, string)
+  href: api/Zamasoft.CTI.Result.FileResults.html#Zamasoft_CTI_Result_FileResults__ctor_System_String_System_String_
+  commentId: M:Zamasoft.CTI.Result.FileResults.#ctor(System.String,System.String)
+  name.vb: New(String, String)
+  fullName: Zamasoft.CTI.Result.FileResults.FileResults(string, string)
+  fullName.vb: Zamasoft.CTI.Result.FileResults.New(String, String)
+  nameWithType: FileResults.FileResults(string, string)
+  nameWithType.vb: FileResults.New(String, String)
+- uid: Zamasoft.CTI.Result.FileResults.#ctor*
+  name: FileResults
+  href: api/Zamasoft.CTI.Result.FileResults.html#Zamasoft_CTI_Result_FileResults__ctor_
+  commentId: Overload:Zamasoft.CTI.Result.FileResults.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Zamasoft.CTI.Result.FileResults.FileResults
+  fullName.vb: Zamasoft.CTI.Result.FileResults.New
+  nameWithType: FileResults.FileResults
+  nameWithType.vb: FileResults.New
+- uid: Zamasoft.CTI.Result.FileResults.End
+  name: End()
+  href: api/Zamasoft.CTI.Result.FileResults.html#Zamasoft_CTI_Result_FileResults_End
+  commentId: M:Zamasoft.CTI.Result.FileResults.End
+  fullName: Zamasoft.CTI.Result.FileResults.End()
+  nameWithType: FileResults.End()
+- uid: Zamasoft.CTI.Result.FileResults.End*
+  name: End
+  href: api/Zamasoft.CTI.Result.FileResults.html#Zamasoft_CTI_Result_FileResults_End_
+  commentId: Overload:Zamasoft.CTI.Result.FileResults.End
+  isSpec: "True"
+  fullName: Zamasoft.CTI.Result.FileResults.End
+  nameWithType: FileResults.End
+- uid: Zamasoft.CTI.Result.FileResults.HasNext
+  name: HasNext()
+  href: api/Zamasoft.CTI.Result.FileResults.html#Zamasoft_CTI_Result_FileResults_HasNext
+  commentId: M:Zamasoft.CTI.Result.FileResults.HasNext
+  fullName: Zamasoft.CTI.Result.FileResults.HasNext()
+  nameWithType: FileResults.HasNext()
+- uid: Zamasoft.CTI.Result.FileResults.HasNext*
+  name: HasNext
+  href: api/Zamasoft.CTI.Result.FileResults.html#Zamasoft_CTI_Result_FileResults_HasNext_
+  commentId: Overload:Zamasoft.CTI.Result.FileResults.HasNext
+  isSpec: "True"
+  fullName: Zamasoft.CTI.Result.FileResults.HasNext
+  nameWithType: FileResults.HasNext
+- uid: Zamasoft.CTI.Result.FileResults.NextBuilder(Zamasoft.CTI.Source.SourceInfo)
+  name: NextBuilder(SourceInfo)
+  href: api/Zamasoft.CTI.Result.FileResults.html#Zamasoft_CTI_Result_FileResults_NextBuilder_Zamasoft_CTI_Source_SourceInfo_
+  commentId: M:Zamasoft.CTI.Result.FileResults.NextBuilder(Zamasoft.CTI.Source.SourceInfo)
+  fullName: Zamasoft.CTI.Result.FileResults.NextBuilder(Zamasoft.CTI.Source.SourceInfo)
+  nameWithType: FileResults.NextBuilder(SourceInfo)
+- uid: Zamasoft.CTI.Result.FileResults.NextBuilder*
+  name: NextBuilder
+  href: api/Zamasoft.CTI.Result.FileResults.html#Zamasoft_CTI_Result_FileResults_NextBuilder_
+  commentId: Overload:Zamasoft.CTI.Result.FileResults.NextBuilder
+  isSpec: "True"
+  fullName: Zamasoft.CTI.Result.FileResults.NextBuilder
+  nameWithType: FileResults.NextBuilder
+- uid: Zamasoft.CTI.Result.FileResults.counter
+  name: counter
+  href: api/Zamasoft.CTI.Result.FileResults.html#Zamasoft_CTI_Result_FileResults_counter
+  commentId: F:Zamasoft.CTI.Result.FileResults.counter
+  fullName: Zamasoft.CTI.Result.FileResults.counter
+  nameWithType: FileResults.counter
+- uid: Zamasoft.CTI.Result.FileResults.prefix
+  name: prefix
+  href: api/Zamasoft.CTI.Result.FileResults.html#Zamasoft_CTI_Result_FileResults_prefix
+  commentId: F:Zamasoft.CTI.Result.FileResults.prefix
+  fullName: Zamasoft.CTI.Result.FileResults.prefix
+  nameWithType: FileResults.prefix
+- uid: Zamasoft.CTI.Result.FileResults.suffix
+  name: suffix
+  href: api/Zamasoft.CTI.Result.FileResults.html#Zamasoft_CTI_Result_FileResults_suffix
+  commentId: F:Zamasoft.CTI.Result.FileResults.suffix
+  fullName: Zamasoft.CTI.Result.FileResults.suffix
+  nameWithType: FileResults.suffix
+- uid: Zamasoft.CTI.Result.Results
+  name: Results
+  href: api/Zamasoft.CTI.Result.Results.html
+  commentId: T:Zamasoft.CTI.Result.Results
+  fullName: Zamasoft.CTI.Result.Results
+  nameWithType: Results
+- uid: Zamasoft.CTI.Result.Results.End
+  name: End()
+  href: api/Zamasoft.CTI.Result.Results.html#Zamasoft_CTI_Result_Results_End
+  commentId: M:Zamasoft.CTI.Result.Results.End
+  fullName: Zamasoft.CTI.Result.Results.End()
+  nameWithType: Results.End()
+- uid: Zamasoft.CTI.Result.Results.End*
+  name: End
+  href: api/Zamasoft.CTI.Result.Results.html#Zamasoft_CTI_Result_Results_End_
+  commentId: Overload:Zamasoft.CTI.Result.Results.End
+  isSpec: "True"
+  fullName: Zamasoft.CTI.Result.Results.End
+  nameWithType: Results.End
+- uid: Zamasoft.CTI.Result.Results.HasNext
+  name: HasNext()
+  href: api/Zamasoft.CTI.Result.Results.html#Zamasoft_CTI_Result_Results_HasNext
+  commentId: M:Zamasoft.CTI.Result.Results.HasNext
+  fullName: Zamasoft.CTI.Result.Results.HasNext()
+  nameWithType: Results.HasNext()
+- uid: Zamasoft.CTI.Result.Results.HasNext*
+  name: HasNext
+  href: api/Zamasoft.CTI.Result.Results.html#Zamasoft_CTI_Result_Results_HasNext_
+  commentId: Overload:Zamasoft.CTI.Result.Results.HasNext
+  isSpec: "True"
+  fullName: Zamasoft.CTI.Result.Results.HasNext
+  nameWithType: Results.HasNext
+- uid: Zamasoft.CTI.Result.Results.NextBuilder(Zamasoft.CTI.Source.SourceInfo)
+  name: NextBuilder(SourceInfo)
+  href: api/Zamasoft.CTI.Result.Results.html#Zamasoft_CTI_Result_Results_NextBuilder_Zamasoft_CTI_Source_SourceInfo_
+  commentId: M:Zamasoft.CTI.Result.Results.NextBuilder(Zamasoft.CTI.Source.SourceInfo)
+  fullName: Zamasoft.CTI.Result.Results.NextBuilder(Zamasoft.CTI.Source.SourceInfo)
+  nameWithType: Results.NextBuilder(SourceInfo)
+- uid: Zamasoft.CTI.Result.Results.NextBuilder*
+  name: NextBuilder
+  href: api/Zamasoft.CTI.Result.Results.html#Zamasoft_CTI_Result_Results_NextBuilder_
+  commentId: Overload:Zamasoft.CTI.Result.Results.NextBuilder
+  isSpec: "True"
+  fullName: Zamasoft.CTI.Result.Results.NextBuilder
+  nameWithType: Results.NextBuilder
+- uid: Zamasoft.CTI.Result.SingleResult
+  name: SingleResult
+  href: api/Zamasoft.CTI.Result.SingleResult.html
+  commentId: T:Zamasoft.CTI.Result.SingleResult
+  fullName: Zamasoft.CTI.Result.SingleResult
+  nameWithType: SingleResult
+- uid: Zamasoft.CTI.Result.SingleResult.#ctor(System.IO.Stream)
+  name: SingleResult(Stream)
+  href: api/Zamasoft.CTI.Result.SingleResult.html#Zamasoft_CTI_Result_SingleResult__ctor_System_IO_Stream_
+  commentId: M:Zamasoft.CTI.Result.SingleResult.#ctor(System.IO.Stream)
+  name.vb: New(Stream)
+  fullName: Zamasoft.CTI.Result.SingleResult.SingleResult(System.IO.Stream)
+  fullName.vb: Zamasoft.CTI.Result.SingleResult.New(System.IO.Stream)
+  nameWithType: SingleResult.SingleResult(Stream)
+  nameWithType.vb: SingleResult.New(Stream)
+- uid: Zamasoft.CTI.Result.SingleResult.#ctor(System.String)
+  name: SingleResult(string)
+  href: api/Zamasoft.CTI.Result.SingleResult.html#Zamasoft_CTI_Result_SingleResult__ctor_System_String_
+  commentId: M:Zamasoft.CTI.Result.SingleResult.#ctor(System.String)
+  name.vb: New(String)
+  fullName: Zamasoft.CTI.Result.SingleResult.SingleResult(string)
+  fullName.vb: Zamasoft.CTI.Result.SingleResult.New(String)
+  nameWithType: SingleResult.SingleResult(string)
+  nameWithType.vb: SingleResult.New(String)
+- uid: Zamasoft.CTI.Result.SingleResult.#ctor(Zamasoft.CTI.Result.Builder)
+  name: SingleResult(Builder)
+  href: api/Zamasoft.CTI.Result.SingleResult.html#Zamasoft_CTI_Result_SingleResult__ctor_Zamasoft_CTI_Result_Builder_
+  commentId: M:Zamasoft.CTI.Result.SingleResult.#ctor(Zamasoft.CTI.Result.Builder)
+  name.vb: New(Builder)
+  fullName: Zamasoft.CTI.Result.SingleResult.SingleResult(Zamasoft.CTI.Result.Builder)
+  fullName.vb: Zamasoft.CTI.Result.SingleResult.New(Zamasoft.CTI.Result.Builder)
+  nameWithType: SingleResult.SingleResult(Builder)
+  nameWithType.vb: SingleResult.New(Builder)
+- uid: Zamasoft.CTI.Result.SingleResult.#ctor*
+  name: SingleResult
+  href: api/Zamasoft.CTI.Result.SingleResult.html#Zamasoft_CTI_Result_SingleResult__ctor_
+  commentId: Overload:Zamasoft.CTI.Result.SingleResult.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Zamasoft.CTI.Result.SingleResult.SingleResult
+  fullName.vb: Zamasoft.CTI.Result.SingleResult.New
+  nameWithType: SingleResult.SingleResult
+  nameWithType.vb: SingleResult.New
+- uid: Zamasoft.CTI.Result.SingleResult.End
+  name: End()
+  href: api/Zamasoft.CTI.Result.SingleResult.html#Zamasoft_CTI_Result_SingleResult_End
+  commentId: M:Zamasoft.CTI.Result.SingleResult.End
+  fullName: Zamasoft.CTI.Result.SingleResult.End()
+  nameWithType: SingleResult.End()
+- uid: Zamasoft.CTI.Result.SingleResult.End*
+  name: End
+  href: api/Zamasoft.CTI.Result.SingleResult.html#Zamasoft_CTI_Result_SingleResult_End_
+  commentId: Overload:Zamasoft.CTI.Result.SingleResult.End
+  isSpec: "True"
+  fullName: Zamasoft.CTI.Result.SingleResult.End
+  nameWithType: SingleResult.End
+- uid: Zamasoft.CTI.Result.SingleResult.HasNext
+  name: HasNext()
+  href: api/Zamasoft.CTI.Result.SingleResult.html#Zamasoft_CTI_Result_SingleResult_HasNext
+  commentId: M:Zamasoft.CTI.Result.SingleResult.HasNext
+  fullName: Zamasoft.CTI.Result.SingleResult.HasNext()
+  nameWithType: SingleResult.HasNext()
+- uid: Zamasoft.CTI.Result.SingleResult.HasNext*
+  name: HasNext
+  href: api/Zamasoft.CTI.Result.SingleResult.html#Zamasoft_CTI_Result_SingleResult_HasNext_
+  commentId: Overload:Zamasoft.CTI.Result.SingleResult.HasNext
+  isSpec: "True"
+  fullName: Zamasoft.CTI.Result.SingleResult.HasNext
+  nameWithType: SingleResult.HasNext
+- uid: Zamasoft.CTI.Result.SingleResult.NextBuilder(Zamasoft.CTI.Source.SourceInfo)
+  name: NextBuilder(SourceInfo)
+  href: api/Zamasoft.CTI.Result.SingleResult.html#Zamasoft_CTI_Result_SingleResult_NextBuilder_Zamasoft_CTI_Source_SourceInfo_
+  commentId: M:Zamasoft.CTI.Result.SingleResult.NextBuilder(Zamasoft.CTI.Source.SourceInfo)
+  fullName: Zamasoft.CTI.Result.SingleResult.NextBuilder(Zamasoft.CTI.Source.SourceInfo)
+  nameWithType: SingleResult.NextBuilder(SourceInfo)
+- uid: Zamasoft.CTI.Result.SingleResult.NextBuilder*
+  name: NextBuilder
+  href: api/Zamasoft.CTI.Result.SingleResult.html#Zamasoft_CTI_Result_SingleResult_NextBuilder_
+  commentId: Overload:Zamasoft.CTI.Result.SingleResult.NextBuilder
+  isSpec: "True"
+  fullName: Zamasoft.CTI.Result.SingleResult.NextBuilder
+  nameWithType: SingleResult.NextBuilder
+- uid: Zamasoft.CTI.Result.SingleResult.builder
+  name: builder
+  href: api/Zamasoft.CTI.Result.SingleResult.html#Zamasoft_CTI_Result_SingleResult_builder
+  commentId: F:Zamasoft.CTI.Result.SingleResult.builder
+  fullName: Zamasoft.CTI.Result.SingleResult.builder
+  nameWithType: SingleResult.builder
+- uid: Zamasoft.CTI.Result.SingleResult.file
+  name: file
+  href: api/Zamasoft.CTI.Result.SingleResult.html#Zamasoft_CTI_Result_SingleResult_file
+  commentId: F:Zamasoft.CTI.Result.SingleResult.file
+  fullName: Zamasoft.CTI.Result.SingleResult.file
+  nameWithType: SingleResult.file
+- uid: Zamasoft.CTI.Session
+  name: Session
+  href: api/Zamasoft.CTI.Session.html
+  commentId: T:Zamasoft.CTI.Session
+  fullName: Zamasoft.CTI.Session
+  nameWithType: Session
+- uid: Zamasoft.CTI.Session.Abort(Zamasoft.CTI.AbortMode)
+  name: Abort(AbortMode)
+  href: api/Zamasoft.CTI.Session.html#Zamasoft_CTI_Session_Abort_Zamasoft_CTI_AbortMode_
+  commentId: M:Zamasoft.CTI.Session.Abort(Zamasoft.CTI.AbortMode)
+  fullName: Zamasoft.CTI.Session.Abort(Zamasoft.CTI.AbortMode)
+  nameWithType: Session.Abort(AbortMode)
+- uid: Zamasoft.CTI.Session.Abort*
+  name: Abort
+  href: api/Zamasoft.CTI.Session.html#Zamasoft_CTI_Session_Abort_
+  commentId: Overload:Zamasoft.CTI.Session.Abort
+  isSpec: "True"
+  fullName: Zamasoft.CTI.Session.Abort
+  nameWithType: Session.Abort
+- uid: Zamasoft.CTI.Session.Close
+  name: Close()
+  href: api/Zamasoft.CTI.Session.html#Zamasoft_CTI_Session_Close
+  commentId: M:Zamasoft.CTI.Session.Close
+  fullName: Zamasoft.CTI.Session.Close()
+  nameWithType: Session.Close()
+- uid: Zamasoft.CTI.Session.Close*
+  name: Close
+  href: api/Zamasoft.CTI.Session.html#Zamasoft_CTI_Session_Close_
+  commentId: Overload:Zamasoft.CTI.Session.Close
+  isSpec: "True"
+  fullName: Zamasoft.CTI.Session.Close
+  nameWithType: Session.Close
+- uid: Zamasoft.CTI.Session.Continuous
+  name: Continuous
+  href: api/Zamasoft.CTI.Session.html#Zamasoft_CTI_Session_Continuous
+  commentId: P:Zamasoft.CTI.Session.Continuous
+  fullName: Zamasoft.CTI.Session.Continuous
+  nameWithType: Session.Continuous
+- uid: Zamasoft.CTI.Session.Continuous*
+  name: Continuous
+  href: api/Zamasoft.CTI.Session.html#Zamasoft_CTI_Session_Continuous_
+  commentId: Overload:Zamasoft.CTI.Session.Continuous
+  isSpec: "True"
+  fullName: Zamasoft.CTI.Session.Continuous
+  nameWithType: Session.Continuous
+- uid: Zamasoft.CTI.Session.GetServerInfo(System.String)
+  name: GetServerInfo(string)
+  href: api/Zamasoft.CTI.Session.html#Zamasoft_CTI_Session_GetServerInfo_System_String_
+  commentId: M:Zamasoft.CTI.Session.GetServerInfo(System.String)
+  name.vb: GetServerInfo(String)
+  fullName: Zamasoft.CTI.Session.GetServerInfo(string)
+  fullName.vb: Zamasoft.CTI.Session.GetServerInfo(String)
+  nameWithType: Session.GetServerInfo(string)
+  nameWithType.vb: Session.GetServerInfo(String)
+- uid: Zamasoft.CTI.Session.GetServerInfo*
+  name: GetServerInfo
+  href: api/Zamasoft.CTI.Session.html#Zamasoft_CTI_Session_GetServerInfo_
+  commentId: Overload:Zamasoft.CTI.Session.GetServerInfo
+  isSpec: "True"
+  fullName: Zamasoft.CTI.Session.GetServerInfo
+  nameWithType: Session.GetServerInfo
+- uid: Zamasoft.CTI.Session.Join
+  name: Join()
+  href: api/Zamasoft.CTI.Session.html#Zamasoft_CTI_Session_Join
+  commentId: M:Zamasoft.CTI.Session.Join
+  fullName: Zamasoft.CTI.Session.Join()
+  nameWithType: Session.Join()
+- uid: Zamasoft.CTI.Session.Join*
+  name: Join
+  href: api/Zamasoft.CTI.Session.html#Zamasoft_CTI_Session_Join_
+  commentId: Overload:Zamasoft.CTI.Session.Join
+  isSpec: "True"
+  fullName: Zamasoft.CTI.Session.Join
+  nameWithType: Session.Join
+- uid: Zamasoft.CTI.Session.MessageHandler
+  name: MessageHandler
+  href: api/Zamasoft.CTI.Session.html#Zamasoft_CTI_Session_MessageHandler
+  commentId: P:Zamasoft.CTI.Session.MessageHandler
+  fullName: Zamasoft.CTI.Session.MessageHandler
+  nameWithType: Session.MessageHandler
+- uid: Zamasoft.CTI.Session.MessageHandler*
+  name: MessageHandler
+  href: api/Zamasoft.CTI.Session.html#Zamasoft_CTI_Session_MessageHandler_
+  commentId: Overload:Zamasoft.CTI.Session.MessageHandler
+  isSpec: "True"
+  fullName: Zamasoft.CTI.Session.MessageHandler
+  nameWithType: Session.MessageHandler
+- uid: Zamasoft.CTI.Session.ProgressListener
+  name: ProgressListener
+  href: api/Zamasoft.CTI.Session.html#Zamasoft_CTI_Session_ProgressListener
+  commentId: P:Zamasoft.CTI.Session.ProgressListener
+  fullName: Zamasoft.CTI.Session.ProgressListener
+  nameWithType: Session.ProgressListener
+- uid: Zamasoft.CTI.Session.ProgressListener*
+  name: ProgressListener
+  href: api/Zamasoft.CTI.Session.html#Zamasoft_CTI_Session_ProgressListener_
+  commentId: Overload:Zamasoft.CTI.Session.ProgressListener
+  isSpec: "True"
+  fullName: Zamasoft.CTI.Session.ProgressListener
+  nameWithType: Session.ProgressListener
+- uid: Zamasoft.CTI.Session.Property(System.String,System.String)
+  name: Property(string, string)
+  href: api/Zamasoft.CTI.Session.html#Zamasoft_CTI_Session_Property_System_String_System_String_
+  commentId: M:Zamasoft.CTI.Session.Property(System.String,System.String)
+  name.vb: Property(String, String)
+  fullName: Zamasoft.CTI.Session.Property(string, string)
+  fullName.vb: Zamasoft.CTI.Session.Property(String, String)
+  nameWithType: Session.Property(string, string)
+  nameWithType.vb: Session.Property(String, String)
+- uid: Zamasoft.CTI.Session.Property*
+  name: Property
+  href: api/Zamasoft.CTI.Session.html#Zamasoft_CTI_Session_Property_
+  commentId: Overload:Zamasoft.CTI.Session.Property
+  isSpec: "True"
+  fullName: Zamasoft.CTI.Session.Property
+  nameWithType: Session.Property
+- uid: Zamasoft.CTI.Session.Reset
+  name: Reset()
+  href: api/Zamasoft.CTI.Session.html#Zamasoft_CTI_Session_Reset
+  commentId: M:Zamasoft.CTI.Session.Reset
+  fullName: Zamasoft.CTI.Session.Reset()
+  nameWithType: Session.Reset()
+- uid: Zamasoft.CTI.Session.Reset*
+  name: Reset
+  href: api/Zamasoft.CTI.Session.html#Zamasoft_CTI_Session_Reset_
+  commentId: Overload:Zamasoft.CTI.Session.Reset
+  isSpec: "True"
+  fullName: Zamasoft.CTI.Session.Reset
+  nameWithType: Session.Reset
+- uid: Zamasoft.CTI.Session.Resource(Zamasoft.CTI.Source.SourceInfo)
+  name: Resource(SourceInfo)
+  href: api/Zamasoft.CTI.Session.html#Zamasoft_CTI_Session_Resource_Zamasoft_CTI_Source_SourceInfo_
+  commentId: M:Zamasoft.CTI.Session.Resource(Zamasoft.CTI.Source.SourceInfo)
+  fullName: Zamasoft.CTI.Session.Resource(Zamasoft.CTI.Source.SourceInfo)
+  nameWithType: Session.Resource(SourceInfo)
+- uid: Zamasoft.CTI.Session.Resource(Zamasoft.CTI.Source.SourceInfo,System.IO.Stream)
+  name: Resource(SourceInfo, Stream)
+  href: api/Zamasoft.CTI.Session.html#Zamasoft_CTI_Session_Resource_Zamasoft_CTI_Source_SourceInfo_System_IO_Stream_
+  commentId: M:Zamasoft.CTI.Session.Resource(Zamasoft.CTI.Source.SourceInfo,System.IO.Stream)
+  fullName: Zamasoft.CTI.Session.Resource(Zamasoft.CTI.Source.SourceInfo, System.IO.Stream)
+  nameWithType: Session.Resource(SourceInfo, Stream)
+- uid: Zamasoft.CTI.Session.Resource*
+  name: Resource
+  href: api/Zamasoft.CTI.Session.html#Zamasoft_CTI_Session_Resource_
+  commentId: Overload:Zamasoft.CTI.Session.Resource
+  isSpec: "True"
+  fullName: Zamasoft.CTI.Session.Resource
+  nameWithType: Session.Resource
+- uid: Zamasoft.CTI.Session.Results
+  name: Results
+  href: api/Zamasoft.CTI.Session.html#Zamasoft_CTI_Session_Results
+  commentId: P:Zamasoft.CTI.Session.Results
+  fullName: Zamasoft.CTI.Session.Results
+  nameWithType: Session.Results
+- uid: Zamasoft.CTI.Session.Results*
+  name: Results
+  href: api/Zamasoft.CTI.Session.html#Zamasoft_CTI_Session_Results_
+  commentId: Overload:Zamasoft.CTI.Session.Results
+  isSpec: "True"
+  fullName: Zamasoft.CTI.Session.Results
+  nameWithType: Session.Results
+- uid: Zamasoft.CTI.Session.SourceResolver
+  name: SourceResolver
+  href: api/Zamasoft.CTI.Session.html#Zamasoft_CTI_Session_SourceResolver
+  commentId: P:Zamasoft.CTI.Session.SourceResolver
+  fullName: Zamasoft.CTI.Session.SourceResolver
+  nameWithType: Session.SourceResolver
+- uid: Zamasoft.CTI.Session.SourceResolver*
+  name: SourceResolver
+  href: api/Zamasoft.CTI.Session.html#Zamasoft_CTI_Session_SourceResolver_
+  commentId: Overload:Zamasoft.CTI.Session.SourceResolver
+  isSpec: "True"
+  fullName: Zamasoft.CTI.Session.SourceResolver
+  nameWithType: Session.SourceResolver
+- uid: Zamasoft.CTI.Session.Transcode(System.String)
+  name: Transcode(string)
+  href: api/Zamasoft.CTI.Session.html#Zamasoft_CTI_Session_Transcode_System_String_
+  commentId: M:Zamasoft.CTI.Session.Transcode(System.String)
+  name.vb: Transcode(String)
+  fullName: Zamasoft.CTI.Session.Transcode(string)
+  fullName.vb: Zamasoft.CTI.Session.Transcode(String)
+  nameWithType: Session.Transcode(string)
+  nameWithType.vb: Session.Transcode(String)
+- uid: Zamasoft.CTI.Session.Transcode(Zamasoft.CTI.Source.SourceInfo)
+  name: Transcode(SourceInfo)
+  href: api/Zamasoft.CTI.Session.html#Zamasoft_CTI_Session_Transcode_Zamasoft_CTI_Source_SourceInfo_
+  commentId: M:Zamasoft.CTI.Session.Transcode(Zamasoft.CTI.Source.SourceInfo)
+  fullName: Zamasoft.CTI.Session.Transcode(Zamasoft.CTI.Source.SourceInfo)
+  nameWithType: Session.Transcode(SourceInfo)
+- uid: Zamasoft.CTI.Session.Transcode(Zamasoft.CTI.Source.SourceInfo,System.IO.Stream)
+  name: Transcode(SourceInfo, Stream)
+  href: api/Zamasoft.CTI.Session.html#Zamasoft_CTI_Session_Transcode_Zamasoft_CTI_Source_SourceInfo_System_IO_Stream_
+  commentId: M:Zamasoft.CTI.Session.Transcode(Zamasoft.CTI.Source.SourceInfo,System.IO.Stream)
+  fullName: Zamasoft.CTI.Session.Transcode(Zamasoft.CTI.Source.SourceInfo, System.IO.Stream)
+  nameWithType: Session.Transcode(SourceInfo, Stream)
+- uid: Zamasoft.CTI.Session.Transcode*
+  name: Transcode
+  href: api/Zamasoft.CTI.Session.html#Zamasoft_CTI_Session_Transcode_
+  commentId: Overload:Zamasoft.CTI.Session.Transcode
+  isSpec: "True"
+  fullName: Zamasoft.CTI.Session.Transcode
+  nameWithType: Session.Transcode
+- uid: Zamasoft.CTI.Source
+  name: Zamasoft.CTI.Source
+  href: api/Zamasoft.CTI.Source.html
+  commentId: N:Zamasoft.CTI.Source
+  fullName: Zamasoft.CTI.Source
+  nameWithType: Zamasoft.CTI.Source
+- uid: Zamasoft.CTI.Source.SourceInfo
+  name: SourceInfo
+  href: api/Zamasoft.CTI.Source.SourceInfo.html
+  commentId: T:Zamasoft.CTI.Source.SourceInfo
+  fullName: Zamasoft.CTI.Source.SourceInfo
+  nameWithType: SourceInfo
+- uid: Zamasoft.CTI.Source.SourceInfo.#ctor(System.String)
+  name: SourceInfo(string)
+  href: api/Zamasoft.CTI.Source.SourceInfo.html#Zamasoft_CTI_Source_SourceInfo__ctor_System_String_
+  commentId: M:Zamasoft.CTI.Source.SourceInfo.#ctor(System.String)
+  name.vb: New(String)
+  fullName: Zamasoft.CTI.Source.SourceInfo.SourceInfo(string)
+  fullName.vb: Zamasoft.CTI.Source.SourceInfo.New(String)
+  nameWithType: SourceInfo.SourceInfo(string)
+  nameWithType.vb: SourceInfo.New(String)
+- uid: Zamasoft.CTI.Source.SourceInfo.#ctor(System.String,System.String)
+  name: SourceInfo(string, string)
+  href: api/Zamasoft.CTI.Source.SourceInfo.html#Zamasoft_CTI_Source_SourceInfo__ctor_System_String_System_String_
+  commentId: M:Zamasoft.CTI.Source.SourceInfo.#ctor(System.String,System.String)
+  name.vb: New(String, String)
+  fullName: Zamasoft.CTI.Source.SourceInfo.SourceInfo(string, string)
+  fullName.vb: Zamasoft.CTI.Source.SourceInfo.New(String, String)
+  nameWithType: SourceInfo.SourceInfo(string, string)
+  nameWithType.vb: SourceInfo.New(String, String)
+- uid: Zamasoft.CTI.Source.SourceInfo.#ctor(System.String,System.String,System.String)
+  name: SourceInfo(string, string, string)
+  href: api/Zamasoft.CTI.Source.SourceInfo.html#Zamasoft_CTI_Source_SourceInfo__ctor_System_String_System_String_System_String_
+  commentId: M:Zamasoft.CTI.Source.SourceInfo.#ctor(System.String,System.String,System.String)
+  name.vb: New(String, String, String)
+  fullName: Zamasoft.CTI.Source.SourceInfo.SourceInfo(string, string, string)
+  fullName.vb: Zamasoft.CTI.Source.SourceInfo.New(String, String, String)
+  nameWithType: SourceInfo.SourceInfo(string, string, string)
+  nameWithType.vb: SourceInfo.New(String, String, String)
+- uid: Zamasoft.CTI.Source.SourceInfo.#ctor(System.String,System.String,System.String,System.Int64)
+  name: SourceInfo(string, string, string, long)
+  href: api/Zamasoft.CTI.Source.SourceInfo.html#Zamasoft_CTI_Source_SourceInfo__ctor_System_String_System_String_System_String_System_Int64_
+  commentId: M:Zamasoft.CTI.Source.SourceInfo.#ctor(System.String,System.String,System.String,System.Int64)
+  name.vb: New(String, String, String, Long)
+  fullName: Zamasoft.CTI.Source.SourceInfo.SourceInfo(string, string, string, long)
+  fullName.vb: Zamasoft.CTI.Source.SourceInfo.New(String, String, String, Long)
+  nameWithType: SourceInfo.SourceInfo(string, string, string, long)
+  nameWithType.vb: SourceInfo.New(String, String, String, Long)
+- uid: Zamasoft.CTI.Source.SourceInfo.#ctor*
+  name: SourceInfo
+  href: api/Zamasoft.CTI.Source.SourceInfo.html#Zamasoft_CTI_Source_SourceInfo__ctor_
+  commentId: Overload:Zamasoft.CTI.Source.SourceInfo.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Zamasoft.CTI.Source.SourceInfo.SourceInfo
+  fullName.vb: Zamasoft.CTI.Source.SourceInfo.New
+  nameWithType: SourceInfo.SourceInfo
+  nameWithType.vb: SourceInfo.New
+- uid: Zamasoft.CTI.Source.SourceInfo.Encoding
+  name: Encoding
+  href: api/Zamasoft.CTI.Source.SourceInfo.html#Zamasoft_CTI_Source_SourceInfo_Encoding
+  commentId: P:Zamasoft.CTI.Source.SourceInfo.Encoding
+  fullName: Zamasoft.CTI.Source.SourceInfo.Encoding
+  nameWithType: SourceInfo.Encoding
+- uid: Zamasoft.CTI.Source.SourceInfo.Encoding*
+  name: Encoding
+  href: api/Zamasoft.CTI.Source.SourceInfo.html#Zamasoft_CTI_Source_SourceInfo_Encoding_
+  commentId: Overload:Zamasoft.CTI.Source.SourceInfo.Encoding
+  isSpec: "True"
+  fullName: Zamasoft.CTI.Source.SourceInfo.Encoding
+  nameWithType: SourceInfo.Encoding
+- uid: Zamasoft.CTI.Source.SourceInfo.Length
+  name: Length
+  href: api/Zamasoft.CTI.Source.SourceInfo.html#Zamasoft_CTI_Source_SourceInfo_Length
+  commentId: P:Zamasoft.CTI.Source.SourceInfo.Length
+  fullName: Zamasoft.CTI.Source.SourceInfo.Length
+  nameWithType: SourceInfo.Length
+- uid: Zamasoft.CTI.Source.SourceInfo.Length*
+  name: Length
+  href: api/Zamasoft.CTI.Source.SourceInfo.html#Zamasoft_CTI_Source_SourceInfo_Length_
+  commentId: Overload:Zamasoft.CTI.Source.SourceInfo.Length
+  isSpec: "True"
+  fullName: Zamasoft.CTI.Source.SourceInfo.Length
+  nameWithType: SourceInfo.Length
+- uid: Zamasoft.CTI.Source.SourceInfo.MimeType
+  name: MimeType
+  href: api/Zamasoft.CTI.Source.SourceInfo.html#Zamasoft_CTI_Source_SourceInfo_MimeType
+  commentId: P:Zamasoft.CTI.Source.SourceInfo.MimeType
+  fullName: Zamasoft.CTI.Source.SourceInfo.MimeType
+  nameWithType: SourceInfo.MimeType
+- uid: Zamasoft.CTI.Source.SourceInfo.MimeType*
+  name: MimeType
+  href: api/Zamasoft.CTI.Source.SourceInfo.html#Zamasoft_CTI_Source_SourceInfo_MimeType_
+  commentId: Overload:Zamasoft.CTI.Source.SourceInfo.MimeType
+  isSpec: "True"
+  fullName: Zamasoft.CTI.Source.SourceInfo.MimeType
+  nameWithType: SourceInfo.MimeType
+- uid: Zamasoft.CTI.Source.SourceInfo.Uri
+  name: Uri
+  href: api/Zamasoft.CTI.Source.SourceInfo.html#Zamasoft_CTI_Source_SourceInfo_Uri
+  commentId: P:Zamasoft.CTI.Source.SourceInfo.Uri
+  fullName: Zamasoft.CTI.Source.SourceInfo.Uri
+  nameWithType: SourceInfo.Uri
+- uid: Zamasoft.CTI.Source.SourceInfo.Uri*
+  name: Uri
+  href: api/Zamasoft.CTI.Source.SourceInfo.html#Zamasoft_CTI_Source_SourceInfo_Uri_
+  commentId: Overload:Zamasoft.CTI.Source.SourceInfo.Uri
+  isSpec: "True"
+  fullName: Zamasoft.CTI.Source.SourceInfo.Uri
+  nameWithType: SourceInfo.Uri
+- uid: Zamasoft.CTI.Source.SourceResolver
+  name: SourceResolver
+  href: api/Zamasoft.CTI.Source.SourceResolver.html
+  commentId: T:Zamasoft.CTI.Source.SourceResolver
+  fullName: Zamasoft.CTI.Source.SourceResolver
+  nameWithType: SourceResolver
+- uid: Zamasoft.CTI.Source.SourceResolver.Resolve(System.String,Zamasoft.CTI.Source.SourceInfo@)
+  name: Resolve(string, ref SourceInfo)
+  href: api/Zamasoft.CTI.Source.SourceResolver.html#Zamasoft_CTI_Source_SourceResolver_Resolve_System_String_Zamasoft_CTI_Source_SourceInfo__
+  commentId: M:Zamasoft.CTI.Source.SourceResolver.Resolve(System.String,Zamasoft.CTI.Source.SourceInfo@)
+  name.vb: Resolve(String, SourceInfo)
+  fullName: Zamasoft.CTI.Source.SourceResolver.Resolve(string, ref Zamasoft.CTI.Source.SourceInfo)
+  fullName.vb: Zamasoft.CTI.Source.SourceResolver.Resolve(String, Zamasoft.CTI.Source.SourceInfo)
+  nameWithType: SourceResolver.Resolve(string, ref SourceInfo)
+  nameWithType.vb: SourceResolver.Resolve(String, SourceInfo)
+- uid: Zamasoft.CTI.Source.SourceResolver.Resolve*
+  name: Resolve
+  href: api/Zamasoft.CTI.Source.SourceResolver.html#Zamasoft_CTI_Source_SourceResolver_Resolve_
+  commentId: Overload:Zamasoft.CTI.Source.SourceResolver.Resolve
+  isSpec: "True"
+  fullName: Zamasoft.CTI.Source.SourceResolver.Resolve
+  nameWithType: SourceResolver.Resolve
+- uid: Zamasoft.CTI.StateCode
+  name: StateCode
+  href: api/Zamasoft.CTI.StateCode.html
+  commentId: T:Zamasoft.CTI.StateCode
+  fullName: Zamasoft.CTI.StateCode
+  nameWithType: StateCode
+- uid: Zamasoft.CTI.StateCode.BROKEN
+  name: BROKEN
+  href: api/Zamasoft.CTI.StateCode.html#Zamasoft_CTI_StateCode_BROKEN
+  commentId: F:Zamasoft.CTI.StateCode.BROKEN
+  fullName: Zamasoft.CTI.StateCode.BROKEN
+  nameWithType: StateCode.BROKEN
+- uid: Zamasoft.CTI.StateCode.READABLE
+  name: READABLE
+  href: api/Zamasoft.CTI.StateCode.html#Zamasoft_CTI_StateCode_READABLE
+  commentId: F:Zamasoft.CTI.StateCode.READABLE
+  fullName: Zamasoft.CTI.StateCode.READABLE
+  nameWithType: StateCode.READABLE
+- uid: Zamasoft.CTI.TranscoderException
+  name: TranscoderException
+  href: api/Zamasoft.CTI.TranscoderException.html
+  commentId: T:Zamasoft.CTI.TranscoderException
+  fullName: Zamasoft.CTI.TranscoderException
+  nameWithType: TranscoderException
+- uid: Zamasoft.CTI.TranscoderException.#ctor(Zamasoft.CTI.StateCode,System.Int16,System.String[],System.String)
+  name: TranscoderException(StateCode, short, string[], string)
+  href: api/Zamasoft.CTI.TranscoderException.html#Zamasoft_CTI_TranscoderException__ctor_Zamasoft_CTI_StateCode_System_Int16_System_String___System_String_
+  commentId: M:Zamasoft.CTI.TranscoderException.#ctor(Zamasoft.CTI.StateCode,System.Int16,System.String[],System.String)
+  name.vb: New(StateCode, Short, String(), String)
+  fullName: Zamasoft.CTI.TranscoderException.TranscoderException(Zamasoft.CTI.StateCode, short, string[], string)
+  fullName.vb: Zamasoft.CTI.TranscoderException.New(Zamasoft.CTI.StateCode, Short, String(), String)
+  nameWithType: TranscoderException.TranscoderException(StateCode, short, string[], string)
+  nameWithType.vb: TranscoderException.New(StateCode, Short, String(), String)
+- uid: Zamasoft.CTI.TranscoderException.#ctor*
+  name: TranscoderException
+  href: api/Zamasoft.CTI.TranscoderException.html#Zamasoft_CTI_TranscoderException__ctor_
+  commentId: Overload:Zamasoft.CTI.TranscoderException.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Zamasoft.CTI.TranscoderException.TranscoderException
+  fullName.vb: Zamasoft.CTI.TranscoderException.New
+  nameWithType: TranscoderException.TranscoderException
+  nameWithType.vb: TranscoderException.New
+- uid: Zamasoft.CTI.TranscoderException.Args
+  name: Args
+  href: api/Zamasoft.CTI.TranscoderException.html#Zamasoft_CTI_TranscoderException_Args
+  commentId: P:Zamasoft.CTI.TranscoderException.Args
+  fullName: Zamasoft.CTI.TranscoderException.Args
+  nameWithType: TranscoderException.Args
+- uid: Zamasoft.CTI.TranscoderException.Args*
+  name: Args
+  href: api/Zamasoft.CTI.TranscoderException.html#Zamasoft_CTI_TranscoderException_Args_
+  commentId: Overload:Zamasoft.CTI.TranscoderException.Args
+  isSpec: "True"
+  fullName: Zamasoft.CTI.TranscoderException.Args
+  nameWithType: TranscoderException.Args
+- uid: Zamasoft.CTI.TranscoderException.Code
+  name: Code
+  href: api/Zamasoft.CTI.TranscoderException.html#Zamasoft_CTI_TranscoderException_Code
+  commentId: P:Zamasoft.CTI.TranscoderException.Code
+  fullName: Zamasoft.CTI.TranscoderException.Code
+  nameWithType: TranscoderException.Code
+- uid: Zamasoft.CTI.TranscoderException.Code*
+  name: Code
+  href: api/Zamasoft.CTI.TranscoderException.html#Zamasoft_CTI_TranscoderException_Code_
+  commentId: Overload:Zamasoft.CTI.TranscoderException.Code
+  isSpec: "True"
+  fullName: Zamasoft.CTI.TranscoderException.Code
+  nameWithType: TranscoderException.Code
+- uid: Zamasoft.CTI.TranscoderException.State
+  name: State
+  href: api/Zamasoft.CTI.TranscoderException.html#Zamasoft_CTI_TranscoderException_State
+  commentId: P:Zamasoft.CTI.TranscoderException.State
+  fullName: Zamasoft.CTI.TranscoderException.State
+  nameWithType: TranscoderException.State
+- uid: Zamasoft.CTI.TranscoderException.State*
+  name: State
+  href: api/Zamasoft.CTI.TranscoderException.html#Zamasoft_CTI_TranscoderException_State_
+  commentId: Overload:Zamasoft.CTI.TranscoderException.State
+  isSpec: "True"
+  fullName: Zamasoft.CTI.TranscoderException.State
+  nameWithType: TranscoderException.State
+- uid: Zamasoft.CTI.Utils
+  name: Utils
+  href: api/Zamasoft.CTI.Utils.html
+  commentId: T:Zamasoft.CTI.Utils
+  fullName: Zamasoft.CTI.Utils
+  nameWithType: Utils
+- uid: Zamasoft.CTI.Utils.SendResourceFile(Zamasoft.CTI.Session,System.String,System.String,System.String)
+  name: SendResourceFile(Session, string, string, string)
+  href: api/Zamasoft.CTI.Utils.html#Zamasoft_CTI_Utils_SendResourceFile_Zamasoft_CTI_Session_System_String_System_String_System_String_
+  commentId: M:Zamasoft.CTI.Utils.SendResourceFile(Zamasoft.CTI.Session,System.String,System.String,System.String)
+  name.vb: SendResourceFile(Session, String, String, String)
+  fullName: Zamasoft.CTI.Utils.SendResourceFile(Zamasoft.CTI.Session, string, string, string)
+  fullName.vb: Zamasoft.CTI.Utils.SendResourceFile(Zamasoft.CTI.Session, String, String, String)
+  nameWithType: Utils.SendResourceFile(Session, string, string, string)
+  nameWithType.vb: Utils.SendResourceFile(Session, String, String, String)
+- uid: Zamasoft.CTI.Utils.SendResourceFile*
+  name: SendResourceFile
+  href: api/Zamasoft.CTI.Utils.html#Zamasoft_CTI_Utils_SendResourceFile_
+  commentId: Overload:Zamasoft.CTI.Utils.SendResourceFile
+  isSpec: "True"
+  fullName: Zamasoft.CTI.Utils.SendResourceFile
+  nameWithType: Utils.SendResourceFile
+- uid: Zamasoft.CTI.Utils.SendResourceStream(Zamasoft.CTI.Session,System.IO.Stream,System.String,System.String,System.String)
+  name: SendResourceStream(Session, Stream, string, string, string)
+  href: api/Zamasoft.CTI.Utils.html#Zamasoft_CTI_Utils_SendResourceStream_Zamasoft_CTI_Session_System_IO_Stream_System_String_System_String_System_String_
+  commentId: M:Zamasoft.CTI.Utils.SendResourceStream(Zamasoft.CTI.Session,System.IO.Stream,System.String,System.String,System.String)
+  name.vb: SendResourceStream(Session, Stream, String, String, String)
+  fullName: Zamasoft.CTI.Utils.SendResourceStream(Zamasoft.CTI.Session, System.IO.Stream, string, string, string)
+  fullName.vb: Zamasoft.CTI.Utils.SendResourceStream(Zamasoft.CTI.Session, System.IO.Stream, String, String, String)
+  nameWithType: Utils.SendResourceStream(Session, Stream, string, string, string)
+  nameWithType.vb: Utils.SendResourceStream(Session, Stream, String, String, String)
+- uid: Zamasoft.CTI.Utils.SendResourceStream*
+  name: SendResourceStream
+  href: api/Zamasoft.CTI.Utils.html#Zamasoft_CTI_Utils_SendResourceStream_
+  commentId: Overload:Zamasoft.CTI.Utils.SendResourceStream
+  isSpec: "True"
+  fullName: Zamasoft.CTI.Utils.SendResourceStream
+  nameWithType: Utils.SendResourceStream
+- uid: Zamasoft.CTI.Utils.SetConsoleMessageHander(Zamasoft.CTI.Session)
+  name: SetConsoleMessageHander(Session)
+  href: api/Zamasoft.CTI.Utils.html#Zamasoft_CTI_Utils_SetConsoleMessageHander_Zamasoft_CTI_Session_
+  commentId: M:Zamasoft.CTI.Utils.SetConsoleMessageHander(Zamasoft.CTI.Session)
+  fullName: Zamasoft.CTI.Utils.SetConsoleMessageHander(Zamasoft.CTI.Session)
+  nameWithType: Utils.SetConsoleMessageHander(Session)
+- uid: Zamasoft.CTI.Utils.SetConsoleMessageHander*
+  name: SetConsoleMessageHander
+  href: api/Zamasoft.CTI.Utils.html#Zamasoft_CTI_Utils_SetConsoleMessageHander_
+  commentId: Overload:Zamasoft.CTI.Utils.SetConsoleMessageHander
+  isSpec: "True"
+  fullName: Zamasoft.CTI.Utils.SetConsoleMessageHander
+  nameWithType: Utils.SetConsoleMessageHander
+- uid: Zamasoft.CTI.Utils.SetErrorMessageHander(Zamasoft.CTI.Session)
+  name: SetErrorMessageHander(Session)
+  href: api/Zamasoft.CTI.Utils.html#Zamasoft_CTI_Utils_SetErrorMessageHander_Zamasoft_CTI_Session_
+  commentId: M:Zamasoft.CTI.Utils.SetErrorMessageHander(Zamasoft.CTI.Session)
+  fullName: Zamasoft.CTI.Utils.SetErrorMessageHander(Zamasoft.CTI.Session)
+  nameWithType: Utils.SetErrorMessageHander(Session)
+- uid: Zamasoft.CTI.Utils.SetErrorMessageHander*
+  name: SetErrorMessageHander
+  href: api/Zamasoft.CTI.Utils.html#Zamasoft_CTI_Utils_SetErrorMessageHander_
+  commentId: Overload:Zamasoft.CTI.Utils.SetErrorMessageHander
+  isSpec: "True"
+  fullName: Zamasoft.CTI.Utils.SetErrorMessageHander
+  nameWithType: Utils.SetErrorMessageHander
+- uid: Zamasoft.CTI.Utils.SetResultFile(Zamasoft.CTI.Session,System.String)
+  name: SetResultFile(Session, string)
+  href: api/Zamasoft.CTI.Utils.html#Zamasoft_CTI_Utils_SetResultFile_Zamasoft_CTI_Session_System_String_
+  commentId: M:Zamasoft.CTI.Utils.SetResultFile(Zamasoft.CTI.Session,System.String)
+  name.vb: SetResultFile(Session, String)
+  fullName: Zamasoft.CTI.Utils.SetResultFile(Zamasoft.CTI.Session, string)
+  fullName.vb: Zamasoft.CTI.Utils.SetResultFile(Zamasoft.CTI.Session, String)
+  nameWithType: Utils.SetResultFile(Session, string)
+  nameWithType.vb: Utils.SetResultFile(Session, String)
+- uid: Zamasoft.CTI.Utils.SetResultFile*
+  name: SetResultFile
+  href: api/Zamasoft.CTI.Utils.html#Zamasoft_CTI_Utils_SetResultFile_
+  commentId: Overload:Zamasoft.CTI.Utils.SetResultFile
+  isSpec: "True"
+  fullName: Zamasoft.CTI.Utils.SetResultFile
+  nameWithType: Utils.SetResultFile
+- uid: Zamasoft.CTI.Utils.SetResultStream(Zamasoft.CTI.Session,System.IO.Stream)
+  name: SetResultStream(Session, Stream)
+  href: api/Zamasoft.CTI.Utils.html#Zamasoft_CTI_Utils_SetResultStream_Zamasoft_CTI_Session_System_IO_Stream_
+  commentId: M:Zamasoft.CTI.Utils.SetResultStream(Zamasoft.CTI.Session,System.IO.Stream)
+  fullName: Zamasoft.CTI.Utils.SetResultStream(Zamasoft.CTI.Session, System.IO.Stream)
+  nameWithType: Utils.SetResultStream(Session, Stream)
+- uid: Zamasoft.CTI.Utils.SetResultStream*
+  name: SetResultStream
+  href: api/Zamasoft.CTI.Utils.html#Zamasoft_CTI_Utils_SetResultStream_
+  commentId: Overload:Zamasoft.CTI.Utils.SetResultStream
+  isSpec: "True"
+  fullName: Zamasoft.CTI.Utils.SetResultStream
+  nameWithType: Utils.SetResultStream
+- uid: Zamasoft.CTI.Utils.TranscodeFile(Zamasoft.CTI.Session,System.String,System.String,System.String)
+  name: TranscodeFile(Session, string, string, string)
+  href: api/Zamasoft.CTI.Utils.html#Zamasoft_CTI_Utils_TranscodeFile_Zamasoft_CTI_Session_System_String_System_String_System_String_
+  commentId: M:Zamasoft.CTI.Utils.TranscodeFile(Zamasoft.CTI.Session,System.String,System.String,System.String)
+  name.vb: TranscodeFile(Session, String, String, String)
+  fullName: Zamasoft.CTI.Utils.TranscodeFile(Zamasoft.CTI.Session, string, string, string)
+  fullName.vb: Zamasoft.CTI.Utils.TranscodeFile(Zamasoft.CTI.Session, String, String, String)
+  nameWithType: Utils.TranscodeFile(Session, string, string, string)
+  nameWithType.vb: Utils.TranscodeFile(Session, String, String, String)
+- uid: Zamasoft.CTI.Utils.TranscodeFile*
+  name: TranscodeFile
+  href: api/Zamasoft.CTI.Utils.html#Zamasoft_CTI_Utils_TranscodeFile_
+  commentId: Overload:Zamasoft.CTI.Utils.TranscodeFile
+  isSpec: "True"
+  fullName: Zamasoft.CTI.Utils.TranscodeFile
+  nameWithType: Utils.TranscodeFile
+- uid: Zamasoft.CTI.Utils.TranscodeStream(Zamasoft.CTI.Session,System.IO.Stream,System.String,System.String,System.String)
+  name: TranscodeStream(Session, Stream, string, string, string)
+  href: api/Zamasoft.CTI.Utils.html#Zamasoft_CTI_Utils_TranscodeStream_Zamasoft_CTI_Session_System_IO_Stream_System_String_System_String_System_String_
+  commentId: M:Zamasoft.CTI.Utils.TranscodeStream(Zamasoft.CTI.Session,System.IO.Stream,System.String,System.String,System.String)
+  name.vb: TranscodeStream(Session, Stream, String, String, String)
+  fullName: Zamasoft.CTI.Utils.TranscodeStream(Zamasoft.CTI.Session, System.IO.Stream, string, string, string)
+  fullName.vb: Zamasoft.CTI.Utils.TranscodeStream(Zamasoft.CTI.Session, System.IO.Stream, String, String, String)
+  nameWithType: Utils.TranscodeStream(Session, Stream, string, string, string)
+  nameWithType.vb: Utils.TranscodeStream(Session, Stream, String, String, String)
+- uid: Zamasoft.CTI.Utils.TranscodeStream*
+  name: TranscodeStream
+  href: api/Zamasoft.CTI.Utils.html#Zamasoft_CTI_Utils_TranscodeStream_
+  commentId: Overload:Zamasoft.CTI.Utils.TranscodeStream
+  isSpec: "True"
+  fullName: Zamasoft.CTI.Utils.TranscodeStream
+  nameWithType: Utils.TranscodeStream

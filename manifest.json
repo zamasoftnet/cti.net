@@ -1,0 +1,328 @@
+{
+  "source_base_path": "F:/dev/zamasoftnet-public/cti.net",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Conceptual",
+      "source_relative_path": "README.md",
+      "output": {
+        ".html": {
+          "relative_path": "README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Zamasoft.CTI.AbortMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zamasoft.CTI.AbortMode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Zamasoft.CTI.AbortMode",
+      "Summary": "<p sourcefile=\"api/Zamasoft.CTI.AbortMode.yml\" sourcestartlinenumber=\"1\">処理の中断方法です。</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Zamasoft.CTI.Driver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zamasoft.CTI.Driver.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Zamasoft.CTI.Driver",
+      "Summary": "<p sourcefile=\"api/Zamasoft.CTI.Driver.yml\" sourcestartlinenumber=\"1\">ドライバーのインターフェースです。\n通常はプログラマが直接使う必要がありません。\nZamasoft.CTI.DriverManagerを使用してください。</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Zamasoft.CTI.DriverManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zamasoft.CTI.DriverManager.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Zamasoft.CTI.DriverManager",
+      "Summary": "<p sourcefile=\"api/Zamasoft.CTI.DriverManager.yml\" sourcestartlinenumber=\"1\">ドライバの窓口クラスです。</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Zamasoft.CTI.Message.MessageHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zamasoft.CTI.Message.MessageHandler.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Zamasoft.CTI.Message.MessageHandler",
+      "Summary": "<p sourcefile=\"api/Zamasoft.CTI.Message.MessageHandler.yml\" sourcestartlinenumber=\"1\">メッセージを受け取るインターフェースです。</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Zamasoft.CTI.Message.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zamasoft.CTI.Message.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Zamasoft.CTI.Message",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Zamasoft.CTI.Progress.ProgressListener.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zamasoft.CTI.Progress.ProgressListener.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Zamasoft.CTI.Progress.ProgressListener",
+      "Summary": "<p sourcefile=\"api/Zamasoft.CTI.Progress.ProgressListener.yml\" sourcestartlinenumber=\"1\">サーバ側でのメインドキュメントの処理状況を受け取ります。</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Zamasoft.CTI.Progress.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zamasoft.CTI.Progress.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Zamasoft.CTI.Progress",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Zamasoft.CTI.Result.Builder.Block.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zamasoft.CTI.Result.Builder.Block.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Zamasoft.CTI.Result.Builder.Block",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Zamasoft.CTI.Result.Builder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zamasoft.CTI.Result.Builder.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Zamasoft.CTI.Result.Builder",
+      "Summary": "<p sourcefile=\"api/Zamasoft.CTI.Result.Builder.yml\" sourcestartlinenumber=\"1\">ストリームに対してデータを生成します。</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Zamasoft.CTI.Result.FileResults.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zamasoft.CTI.Result.FileResults.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Zamasoft.CTI.Result.FileResults",
+      "Summary": "<p sourcefile=\"api/Zamasoft.CTI.Result.FileResults.yml\" sourcestartlinenumber=\"1\">複数のファイルを複数の結果として生成します。</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Zamasoft.CTI.Result.Results.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zamasoft.CTI.Result.Results.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Zamasoft.CTI.Result.Results",
+      "Summary": "<p sourcefile=\"api/Zamasoft.CTI.Result.Results.yml\" sourcestartlinenumber=\"1\">１つまたは複数の結果を生成するためのインターフェースです。</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Zamasoft.CTI.Result.SingleResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zamasoft.CTI.Result.SingleResult.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Zamasoft.CTI.Result.SingleResult",
+      "Summary": "<p sourcefile=\"api/Zamasoft.CTI.Result.SingleResult.yml\" sourcestartlinenumber=\"1\">単一の結果を生成します。\n画像などを生成する場合２枚目以降は生成されません。</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Zamasoft.CTI.Result.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zamasoft.CTI.Result.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Zamasoft.CTI.Result",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Zamasoft.CTI.Session.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zamasoft.CTI.Session.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Zamasoft.CTI.Session",
+      "Summary": "<p sourcefile=\"api/Zamasoft.CTI.Session.yml\" sourcestartlinenumber=\"1\">ドキュメント変換処理を実行するためのサーバーとの接続です。</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Zamasoft.CTI.Source.SourceInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zamasoft.CTI.Source.SourceInfo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Zamasoft.CTI.Source.SourceInfo",
+      "Summary": "<p sourcefile=\"api/Zamasoft.CTI.Source.SourceInfo.yml\" sourcestartlinenumber=\"1\">リソース、ドキュメントのメタ情報です。</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Zamasoft.CTI.Source.SourceResolver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zamasoft.CTI.Source.SourceResolver.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Zamasoft.CTI.Source.SourceResolver",
+      "Summary": "<p sourcefile=\"api/Zamasoft.CTI.Source.SourceResolver.yml\" sourcestartlinenumber=\"1\">URIで示されたリソースを取得するためのインターフェースです。</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Zamasoft.CTI.Source.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zamasoft.CTI.Source.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Zamasoft.CTI.Source",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Zamasoft.CTI.StateCode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zamasoft.CTI.StateCode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Zamasoft.CTI.StateCode",
+      "Summary": "<p sourcefile=\"api/Zamasoft.CTI.StateCode.yml\" sourcestartlinenumber=\"1\">中断後のデータの状態です。</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Zamasoft.CTI.TranscoderException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zamasoft.CTI.TranscoderException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Zamasoft.CTI.TranscoderException",
+      "Summary": "<p sourcefile=\"api/Zamasoft.CTI.TranscoderException.yml\" sourcestartlinenumber=\"1\">変換処理中の中断に対して発生する例外です。</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Zamasoft.CTI.Utils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zamasoft.CTI.Utils.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Zamasoft.CTI.Utils",
+      "Summary": "<p sourcefile=\"api/Zamasoft.CTI.Utils.yml\" sourcestartlinenumber=\"1\">Zammasoft.CTI.Sessionを扱う上でのユーティリティです。</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Zamasoft.CTI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zamasoft.CTI.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Zamasoft.CTI",
+      "Summary": null
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

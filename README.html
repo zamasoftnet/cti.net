@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>CTI Driver for .NET </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="CTI Driver for .NET ">
+    
+    
+      <link rel="shortcut icon" href="favicon.ico">
+      <link rel="stylesheet" href="styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="styles/docfx.css">
+      <link rel="stylesheet" href="styles/main.css">
+      <meta property="docfx:navrel" content="">
+      <meta property="docfx:tocrel" content="">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="cti-driver-for-net">CTI Driver for .NET</h1>
+
+<p>Copper PDF 文書変換サーバーに接続するための.NETドライバ（C#, VB.NET等）</p>
+<p>バージョン: 2.1.0</p>
+<h2 id="動作要件">動作要件</h2>
+<ul>
+<li>.NET Standard 2.0 以降（.NET Framework 4.6.1+ / .NET Core 2.0+ / .NET 5–9）</li>
+</ul>
+<h2 id="インストール">インストール</h2>
+<h3 id="nuget-を使う方法推奨">NuGet を使う方法（推奨）</h3>
+<pre><code class="lang-bash">dotnet add package Zamasoft.CTI
+</code></pre>
+<p>または <code>PackageReference</code> をプロジェクトファイルに追加:</p>
+<pre><code class="lang-xml">&lt;PackageReference Include=&quot;Zamasoft.CTI&quot; Version=&quot;2.1.0&quot; /&gt;
+</code></pre>
+<h3 id="ソースからビルドする方法">ソースからビルドする方法</h3>
+<p><code>CTI/CTI.sln</code> をVisual Studio または <code>dotnet build</code> でビルドしてください。</p>
+<h2 id="基本的な使い方">基本的な使い方</h2>
+<p>名前空間 <code>Zamasoft.CTI</code> を使用します。</p>
+<h3 id="c-の例">C# の例</h3>
+<pre><code class="lang-csharp">using Zamasoft.CTI;
+using Zamasoft.CTI.Result;
+
+// セッションを取得
+using (Session session = DriverManager.getSession(
+    new Uri(&quot;ctip://localhost:8099/&quot;), &quot;user&quot;, &quot;kappa&quot;))
+{
+    // 出力先をファイルに設定
+    Utils.SetResultFile(session, &quot;output.pdf&quot;);
+
+    // HTML文書を変換
+    Utils.TranscodeFile(session, &quot;test.html&quot;, &quot;text/html&quot;, null);
+}
+</code></pre>
+<h3 id="vbnet-の例">VB.NET の例</h3>
+<pre><code class="lang-vb">Imports Zamasoft.CTI
+
+Using session As Session = DriverManager.getSession(
+    New Uri(&quot;ctip://localhost:8099/&quot;), &quot;user&quot;, &quot;kappa&quot;)
+
+    Utils.SetResultFile(session, &quot;output.pdf&quot;)
+    Utils.TranscodeFile(session, &quot;test.html&quot;, &quot;text/html&quot;, Nothing)
+End Using
+</code></pre>
+<h2 id="api概要">API概要</h2>
+<h3 id="session-インターフェース">Session インターフェース</h3>
+<table>
+<thead>
+<tr>
+<th>メンバー</th>
+<th>種別</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Results</td>
+<td>プロパティ</td>
+<td>出力先の設定</td>
+</tr>
+<tr>
+<td>MessageHandler</td>
+<td>プロパティ</td>
+<td>メッセージハンドラの設定</td>
+</tr>
+<tr>
+<td>ProgressListener</td>
+<td>プロパティ</td>
+<td>進捗リスナーの設定</td>
+</tr>
+<tr>
+<td>SourceResolver</td>
+<td>プロパティ</td>
+<td>リソースリゾルバの設定</td>
+</tr>
+<tr>
+<td>Continuous</td>
+<td>プロパティ</td>
+<td>連続モードの設定</td>
+</tr>
+<tr>
+<td>GetServerInfo(uri)</td>
+<td>メソッド</td>
+<td>サーバー情報の取得</td>
+</tr>
+<tr>
+<td>Property(key, value)</td>
+<td>メソッド</td>
+<td>プロパティの設定</td>
+</tr>
+<tr>
+<td>Resource(info)</td>
+<td>メソッド</td>
+<td>リソースの送信</td>
+</tr>
+<tr>
+<td>Transcode(info)</td>
+<td>メソッド</td>
+<td>変換の実行（ストリーム）</td>
+</tr>
+<tr>
+<td>Transcode(uri)</td>
+<td>メソッド</td>
+<td>変換の実行（URI）</td>
+</tr>
+<tr>
+<td>Join()</td>
+<td>メソッド</td>
+<td>結果の結合</td>
+</tr>
+<tr>
+<td>Abort(mode)</td>
+<td>メソッド</td>
+<td>変換の中断</td>
+</tr>
+<tr>
+<td>Reset()</td>
+<td>メソッド</td>
+<td>セッションのリセット</td>
+</tr>
+<tr>
+<td>Close()</td>
+<td>メソッド</td>
+<td>セッションのクローズ</td>
+</tr>
+</tbody>
+</table>
+<h3 id="utils-ヘルパークラス">Utils ヘルパークラス</h3>
+<p><code>Utils</code> クラスは、よく使う操作を簡単に行うためのヘルパーメソッドを提供します。</p>
+<ul>
+<li><code>SetResultFile</code> - 出力先をファイルに設定</li>
+<li><code>SetResultStream</code> - 出力先をストリームに設定</li>
+<li><code>TranscodeFile</code> - ファイルを変換</li>
+<li><code>TranscodeStream</code> - ストリームを変換</li>
+<li><code>SendResourceFile</code> - リソースファイルの送信</li>
+</ul>
+<h2 id="付属物">付属物</h2>
+<table>
+<thead>
+<tr>
+<th>パス</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>CTI/CTI/</code></td>
+<td>ライブラリ本体（netstandard2.0）</td>
+</tr>
+<tr>
+<td><code>CTI/ConsoleExamples/</code></td>
+<td>C# サンプルプログラム</td>
+</tr>
+<tr>
+<td><code>CTI/ConsoleExamplesVB/</code></td>
+<td>VB.NET サンプルプログラム</td>
+</tr>
+</tbody>
+</table>
+<h2 id="テストの実行方法">テストの実行方法</h2>
+<p>PDF生成テスト（<code>src/test/generate-pdfs/</code>）は .NET 9 対応の SDK スタイルプロジェクトです。
+CTIライブラリのソースを直接取り込んでビルドするため、別途DLLは不要です。</p>
+<pre><code class="lang-bash">cd cti.net
+dotnet run --project src/test/generate-pdfs
+</code></pre>
+<p>生成されたPDFは <code>../test-output/</code> ディレクトリに保存されます。
+Java側の <code>PdfBoxTest</code> によって全PDFの妥当性（1ページ以上あること）が検証されます。</p>
+<p>Gradleからの実行：</p>
+<pre><code class="lang-bash">./gradlew :cti-driver-ctip:generateDotNetPdfs
+</code></pre>
+<h2 id="ライセンス">ライセンス</h2>
+<p>Apache License 2.0</p>
+<p>Copyright (c) 2011-2015 Zamasoft</p>
+<h2 id="オンラインマニュアル">オンラインマニュアル</h2>
+<p><a href="http://dl.cssj.jp/docs/copper/3.0/html/3423_ctip2_dotnet.html">http://dl.cssj.jp/docs/copper/3.0/html/3423_ctip2_dotnet.html</a></p>
+<h2 id="変更履歴">変更履歴</h2>
+<h3 id="v210-202639">v2.1.0 (2026/3/9)</h3>
+<ul>
+<li>.NET Framework 4.0 から .NET Standard 2.0 に移行（.NET 5–9 / Linux / macOS 対応）。</li>
+<li>NuGet パッケージ（<code>Zamasoft.CTI</code>）として配布可能に。</li>
+<li><code>Thread.Abort()</code> を <code>Thread.Interrupt()</code> / <code>Join()</code> に置き換え（.NET Core 対応）。</li>
+</ul>
+<h3 id="v201-20150409">v2.0.1 (2015/04/09)</h3>
+<ul>
+<li>SSL/TLS対応</li>
+<li>タイムアウト設定（<code>ctip://hostname/?timeout=10000</code>）</li>
+<li>Copper PDF 3.1.1認証対応</li>
+</ul>
+<h3 id="v200-20130208">v2.0.0 (2013/02/08)</h3>
+<ul>
+<li>.NET 3.5と4.0のDLLを添付</li>
+</ul>
+<h3 id="v200-20111106">v2.0.0 (2011/11/06)</h3>
+<ul>
+<li>初回リリース</li>
+</ul>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/zamasoftnet/cti.net/blob/main/README.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>
