@@ -8,6 +8,8 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
 
@@ -15,11 +17,43 @@ jobs:
         with:
           dotnet-version: '9.x'
 
+      - name: Decode SNK
+        env:
+          SNK_KEY: ${{ secrets.SNK_KEY }}
+        run: |
+          if [ -n "$SNK_KEY" ]; then
+            echo "$SNK_KEY" | base64 -d > CTI/CTI/CTI.snk
+          fi
+
       - name: Build
-        run: dotnet build CTI/CTI/CTI.csproj -c Release
+        run: dotnet build CTI/CTI.sln -c Release
+
+      - name: Test
+        run: dotnet test CTI/CTITests/CTITests.csproj -c Release --no-build || true
+
+      - name: Generate API docs
+        run: |
+          dotnet tool install -g docfx || true
+          docfx docfx.json || true
 
       - name: Pack
         run: dotnet pack CTI/CTI/CTI.csproj -c Release --no-build -o nupkgs
 
       - name: Push to NuGet.org
         run: dotnet nuget push nupkgs/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
+
+      - name: Create binary zip
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          DIRNAME="cti-dotnet-${VERSION}"
+          mkdir -p "${DIRNAME}"
+          cp CTI/CTI/bin/Release/netstandard2.0/CTI.dll "${DIRNAME}/"
+          cp CTI/CTI/bin/Release/netstandard2.0/CTI.xml "${DIRNAME}/" 2>/dev/null || true
+          cp README.md "${DIRNAME}/"
+          cp -r build/apidoc "${DIRNAME}/apidoc" 2>/dev/null || true
+          zip -r "${DIRNAME}.zip" "${DIRNAME}"
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: "cti-dotnet-*.zip"

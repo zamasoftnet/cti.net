@@ -16,6 +16,9 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <Nullable>disable</Nullable>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <SignAssembly Condition="Exists('CTI.snk')">true</SignAssembly>
+    <AssemblyOriginatorKeyFile Condition="Exists('CTI.snk')">CTI.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
   <ItemGroup>

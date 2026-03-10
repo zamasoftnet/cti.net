@@ -1,6 +1,7 @@
 bin/
 obj/
 build/
+*.snk
 *.pdf
 *.suo
 *.user
@@ -11,3 +12,6 @@ packages/
 *.nupkg
 TestResults/
 test-config.json
+
+# DocFX intermediate metadata
+api/

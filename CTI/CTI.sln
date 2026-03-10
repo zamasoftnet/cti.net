@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleExamples", "ConsoleE
 		{66553C84-A5A9-489B-A587-413093DE93EF} = {66553C84-A5A9-489B-A587-413093DE93EF}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CTITests", "CTITests\CTITests.csproj", "{C7F2A3D4-1B5E-4A8F-9C6D-2E3F0A1B5C7D}"
+EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ConsoleExamplesVB", "ConsoleExamplesVB\ConsoleExamplesVB.vbproj", "{A35CE8A6-9E9A-40D1-AAA8-B8C2E5D9DC9F}"
 	ProjectSection(ProjectDependencies) = postProject
 		{66553C84-A5A9-489B-A587-413093DE93EF} = {66553C84-A5A9-489B-A587-413093DE93EF}
@@ -33,6 +35,10 @@ Global
 		{A35CE8A6-9E9A-40D1-AAA8-B8C2E5D9DC9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A35CE8A6-9E9A-40D1-AAA8-B8C2E5D9DC9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A35CE8A6-9E9A-40D1-AAA8-B8C2E5D9DC9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7F2A3D4-1B5E-4A8F-9C6D-2E3F0A1B5C7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7F2A3D4-1B5E-4A8F-9C6D-2E3F0A1B5C7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7F2A3D4-1B5E-4A8F-9C6D-2E3F0A1B5C7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7F2A3D4-1B5E-4A8F-9C6D-2E3F0A1B5C7D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
