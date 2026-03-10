@@ -4,6 +4,11 @@ Copper PDF 文書変換サーバーに接続するための.NETドライバ（C#
 
 バージョン: 2.1.0
 
+## API ドキュメント
+
+- **オンライン**: https://zamasoftnet.github.io/cti.net/
+- **NuGet**: https://www.nuget.org/packages/Zamasoft.CTI/
+
 ## 動作要件
 
 - .NET Standard 2.0 以降（.NET Framework 4.6.1+ / .NET Core 2.0+ / .NET 5–9）
