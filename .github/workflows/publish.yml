@@ -57,3 +57,9 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           files: "cti-dotnet-*.zip"
+
+      - name: Deploy API docs to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: build/apidoc
