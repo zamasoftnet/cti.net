@@ -3,7 +3,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>Zamasoft.CTI</RootNamespace>
     <AssemblyName>CTI</AssemblyName>
-    <Version>2.1.0</Version>
+    <Version>2.1.1</Version>
     <Authors>Zamasoft</Authors>
     <Company>Zamasoft</Company>
     <Copyright>Copyright © Zamasoft 2013-2022</Copyright>

@@ -5,8 +5,8 @@
 `CTI/CTI/CTI.csproj` の `<Version>` を更新し、バージョンタグを push します。
 
 ```bash
-git tag v2.1.0
-git push origin v2.1.0
+git tag v2.1.1
+git push origin v2.1.1
 ```
 
 GitHub Actions が以下を自動実行します：

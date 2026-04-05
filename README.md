@@ -2,7 +2,7 @@
 
 Copper PDF 文書変換サーバーに接続するための.NETドライバ（C#, VB.NET等）
 
-バージョン: 2.1.0
+バージョン: 2.1.1
 
 ## API ドキュメント
 
@@ -24,7 +24,7 @@ dotnet add package Zamasoft.CTI
 または `PackageReference` をプロジェクトファイルに追加:
 
 ```xml
-<PackageReference Include="Zamasoft.CTI" Version="2.1.0" />
+<PackageReference Include="Zamasoft.CTI" Version="2.1.1" />
 ```
 
 ### GitHub Releases のアーカイブを使う方法
@@ -149,6 +149,11 @@ Copyright (c) 2011-2015 Zamasoft
 http://dl.cssj.jp/docs/copper/3.0/html/3423_ctip2_dotnet.html
 
 ## 変更履歴
+
+### v2.1.1 (2026/4/5)
+
+- GitHub Releases 向けの配布 zip を自動生成するようにしました。
+- NuGet Trusted Publishing と GitHub Release の手順を整理しました。
 
 ### v2.1.0 (2026/3/9)
 
