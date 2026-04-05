@@ -27,6 +27,15 @@ dotnet add package Zamasoft.CTI
 <PackageReference Include="Zamasoft.CTI" Version="2.1.0" />
 ```
 
+### GitHub Releases のアーカイブを使う方法
+
+NuGet を使わない場合は、GitHub Releases からビルド済み zip を取得できます。
+
+- **Releases**: https://github.com/zamasoftnet/cti.net/releases/latest
+- **配布形式**: `cti-dotnet-{VERSION}.zip`
+
+zip には `CTI.dll`, `CTI.xml`, `README.md`, `apidoc/` が含まれます。展開後、`CTI.dll` をプロジェクト参照に追加して利用してください。
+
 ### ソースからビルドする方法
 
 `CTI/CTI.sln` をVisual Studio または `dotnet build` でビルドしてください。
