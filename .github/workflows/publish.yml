@@ -51,20 +51,13 @@ jobs:
         run: dotnet nuget push nupkgs/*.nupkg --api-key ${{ steps.login.outputs.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
 
       - name: Create binary zip
-        run: |
-          VERSION="${GITHUB_REF_NAME#v}"
-          DIRNAME="cti-dotnet-${VERSION}"
-          mkdir -p "${DIRNAME}"
-          cp CTI/CTI/bin/Release/netstandard2.0/CTI.dll "${DIRNAME}/"
-          cp CTI/CTI/bin/Release/netstandard2.0/CTI.xml "${DIRNAME}/" 2>/dev/null || true
-          cp README.md "${DIRNAME}/"
-          cp -r build/apidoc "${DIRNAME}/apidoc" 2>/dev/null || true
-          zip -r "${DIRNAME}.zip" "${DIRNAME}"
+        shell: pwsh
+        run: ./scripts/build-release-zip.ps1 -Version "${{ github.ref_name }}" -SkipBuild
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          files: "cti-dotnet-*.zip"
+          files: "build/cti-dotnet-*.zip"
 
       - name: Deploy API docs to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4

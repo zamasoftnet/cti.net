@@ -31,6 +31,12 @@ dotnet add package Zamasoft.CTI
 
 `CTI/CTI.sln` をVisual Studio または `dotnet build` でビルドしてください。
 
+配布用 zip を生成する場合は、リポジトリルートで以下を実行してください。
+
+```bash
+pwsh ./scripts/build-release-zip.ps1
+```
+
 ## 基本的な使い方
 
 名前空間 `Zamasoft.CTI` を使用します。

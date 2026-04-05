@@ -14,7 +14,7 @@ GitHub Actions が以下を自動実行します：
 1. ビルド・テスト（`dotnet build` / `dotnet test`）
 2. DocFX によるAPIドキュメント生成
 3. Trusted Publishing で NuGet.org へパッケージを公開
-4. GitHub Releases にバイナリ zip を公開（`cti-dotnet-{VERSION}.zip`）
+4. `scripts/build-release-zip.ps1` でバイナリ zip を生成して GitHub Releases に公開（`build/cti-dotnet-{VERSION}.zip`）
 5. GitHub Pages にドキュメントをデプロイ
 
 ## Trusted Publishing 設定
