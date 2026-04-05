@@ -8,6 +8,8 @@
     <Company>Zamasoft</Company>
     <Copyright>Copyright © Zamasoft 2013-2022</Copyright>
     <Description>CTI driver for Copper PDF document conversion server</Description>
+    <PackageDescription>CTI driver for Copper PDF document conversion server</PackageDescription>
+    <PackageTags>copper pdf cti ctip document-conversion</PackageTags>
     <PackageId>Zamasoft.CTI</PackageId>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/zamasoftnet/cti.net</PackageProjectUrl>
