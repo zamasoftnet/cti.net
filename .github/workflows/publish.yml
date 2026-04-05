@@ -26,8 +26,8 @@ jobs:
             echo "$SNK_KEY" | base64 -d > CTI/CTI/CTI.snk
           fi
 
-      - name: Build
-        run: dotnet build CTI/CTI.sln -c Release
+      - name: Build package project
+        run: dotnet build CTI/CTI/CTI.csproj -c Release
 
       - name: Test
         run: dotnet test CTI/CTITests/CTITests.csproj -c Release --no-build || true

@@ -19,6 +19,7 @@
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <Nullable>disable</Nullable>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);1573;1591</NoWarn>
     <SignAssembly Condition="Exists('CTI.snk')">true</SignAssembly>
     <AssemblyOriginatorKeyFile Condition="Exists('CTI.snk')">CTI.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
