@@ -1,7 +1,6 @@
 // CTI .NET ドライバ PDF生成テスト (TC-01〜TC-10)
 //
-// 生成されたPDFは test-output/ ディレクトリに保存される。
-// PdfBoxTest (Java) によって1ページ以上あることが検証される。
+// 生成されたPDFは build/test-output/ ディレクトリに保存される。
 
 using System;
 using System.IO;
@@ -17,8 +16,8 @@ class Program
 
     static Program()
     {
-        // Gradle task の workingDir は cti.net/ なので ../test-output が正しい出力先
-        OUTPUT_DIR = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), "../test-output"));
+        // Gradle task / dotnet run の workingDir は cti.net/ なので build/test-output が出力先
+        OUTPUT_DIR = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), "build/test-output"));
     }
 
     static bool ServerAvailable()

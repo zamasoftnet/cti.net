@@ -130,8 +130,7 @@ cd cti.net
 dotnet run --project src/test/generate-pdfs
 ```
 
-生成されたPDFは `../test-output/` ディレクトリに保存されます。
-Java側の `PdfBoxTest` によって全PDFの妥当性（1ページ以上あること）が検証されます。
+生成されたPDFは `build/test-output/` ディレクトリに保存されます。
 
 Gradleからの実行：
 ```bash
