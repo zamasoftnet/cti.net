@@ -217,6 +217,7 @@ namespace Zamasoft.CTI.Impl
             {
                 port = 8099;
             }
+            bool insecure = false;
             this.tcp = new TcpClient(host, port);
  
             if (this.serverUri.Query != null && this.serverUri.Query.Length >= 1)
@@ -228,14 +229,23 @@ namespace Zamasoft.CTI.Impl
                     {
                         this.tcp.ReceiveTimeout = this.tcp.SendTimeout = int.Parse(pair[1]);
                     }
+                    else if (pair[0] == "insecure")
+                    {
+                        // **証明書の検証を捨てる。**自己署名の試験サーバー向けの
+                        // 逃げ道で、本番で使うと相手が誰かを確かめないまま話すことになる。
+                        insecure = pair.Length > 1 && (pair[1] == "1" || pair[1].ToLowerInvariant() == "true");
+                    }
                 }
             }
 
             Stream tcpStream = this.tcp.GetStream();
             if (ssl)
             {
-                SslStream sslStream = new SslStream(tcpStream, false,
-                    new RemoteCertificateValidationCallback(ValidateServerCertificate));
+                // AuthenticateAsClient(host) が SNI としてこの名前を送り、
+                // 検証もこの名前に対して行われる。
+                SslStream sslStream = insecure
+                    ? new SslStream(tcpStream, false, AcceptAnyCertificate)
+                    : new SslStream(tcpStream, false);
                 sslStream.AuthenticateAsClient(host);
                 this.stream = sslStream;
             }
@@ -252,7 +262,22 @@ namespace Zamasoft.CTI.Impl
             return new RequestConsumer(this);
         }
 
-        public static bool ValidateServerCertificate(
+        /// <summary>
+        /// 証明書を検証せずに受け入れます。
+        ///
+        /// <para>
+        /// <b>接続先の URI に <c>?insecure=1</c> が付いているときだけ使います。</b>
+        /// 以前はこれが常に使われており、<c>ctips:</c> にしても相手が誰かを
+        /// 確かめないまま話していました。自己署名の証明書でも、名前の違う
+        /// 証明書でも素通りするので、経路上の第三者に成り済まされます
+        /// (2026-09-10 に実測。名前の違うホストへ繋いで変換が通ってしまった)。
+        /// </para>
+        ///
+        /// <para>
+        /// 既定では <c>SslStream</c> の標準の検証を使います。
+        /// </para>
+        /// </summary>
+        private static bool AcceptAnyCertificate(
             object sender,
             X509Certificate certificate,
             X509Chain chain,
