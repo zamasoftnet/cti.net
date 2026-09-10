@@ -2,7 +2,7 @@
 
 Copper PDF 文書変換サーバーに接続するための.NETドライバ（C#, VB.NET等）
 
-バージョン: 2.1.1
+バージョン: 2.2.0
 
 ## API ドキュメント
 
@@ -24,7 +24,7 @@ dotnet add package Zamasoft.CTI
 または `PackageReference` をプロジェクトファイルに追加:
 
 ```xml
-<PackageReference Include="Zamasoft.CTI" Version="2.1.1" />
+<PackageReference Include="Zamasoft.CTI" Version="2.2.0" />
 ```
 
 ### GitHub Releases のアーカイブを使う方法
@@ -148,6 +148,17 @@ Copyright (c) 2011-2015 Zamasoft
 http://dl.cssj.jp/docs/copper/3.0/html/3423_ctip2_dotnet.html
 
 ## 変更履歴
+
+### v2.2.0 (2026/9/10)
+
+- **`ctips:` でサーバー証明書を実際に検証するようにしました。**
+  従来は検証結果に関わらず必ず受け入れており、自己署名の証明書でも
+  名前の違う証明書でも素通りしていました。TLS を張っていても、
+  経路上の第三者に成り済まされる状態でした。
+- **互換性に関する注意**: 自己署名の証明書を使う試験サーバーへ
+  繋いでいた場合、このバージョンからは接続が拒否されます。
+  接続先の URI に `?insecure=1` を付けると従来どおり素通しします
+  （本番では使わないでください）。
 
 ### v2.1.1 (2026/4/5)
 
