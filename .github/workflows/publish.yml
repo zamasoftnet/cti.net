@@ -41,13 +41,18 @@ jobs:
       - name: Pack
         run: dotnet pack CTI/CTI/CTI.csproj -c Release --no-build -o nupkgs
 
+      # NuGet.org への公開は NUGET_USER シークレットと Trusted Publishing の policy が
+      # 揃うまで失敗する。失敗しても GitHub Release と Pages は出す(2026-09-11)。
       - name: NuGet login (OIDC -> temp API key)
         id: login
+        continue-on-error: true
         uses: NuGet/login@v1
         with:
           user: ${{ secrets.NUGET_USER }}
 
       - name: Push to NuGet.org
+        if: steps.login.outcome == 'success'
+        continue-on-error: true
         run: dotnet nuget push nupkgs/*.nupkg --api-key ${{ steps.login.outputs.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
 
       - name: Create binary zip
