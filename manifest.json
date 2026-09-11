@@ -1,7 +1,17 @@
 {
-  "source_base_path": "F:/dev/zamasoftnet-public/cti.net",
+  "source_base_path": "/home/runner/work/cti.net/cti.net",
   "xrefmap": "xrefmap.yml",
   "files": [
+    {
+      "type": "Conceptual",
+      "source_relative_path": "PUBLISHING.md",
+      "output": {
+        ".html": {
+          "relative_path": "PUBLISHING.html"
+        }
+      },
+      "version": ""
+    },
     {
       "type": "Conceptual",
       "source_relative_path": "README.md",

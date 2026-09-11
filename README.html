@@ -63,7 +63,12 @@
 <h1 id="cti-driver-for-net">CTI Driver for .NET</h1>
 
 <p>Copper PDF 文書変換サーバーに接続するための.NETドライバ（C#, VB.NET等）</p>
-<p>バージョン: 2.1.0</p>
+<p>バージョン: 2.2.0</p>
+<h2 id="api-ドキュメント">API ドキュメント</h2>
+<ul>
+<li><strong>オンライン</strong>: <a href="https://zamasoftnet.github.io/cti.net/">https://zamasoftnet.github.io/cti.net/</a></li>
+<li><strong>NuGet</strong>: <a href="https://www.nuget.org/packages/Zamasoft.CTI/">https://www.nuget.org/packages/Zamasoft.CTI/</a></li>
+</ul>
 <h2 id="動作要件">動作要件</h2>
 <ul>
 <li>.NET Standard 2.0 以降（.NET Framework 4.6.1+ / .NET Core 2.0+ / .NET 5–9）</li>
@@ -73,10 +78,20 @@
 <pre><code class="lang-bash">dotnet add package Zamasoft.CTI
 </code></pre>
 <p>または <code>PackageReference</code> をプロジェクトファイルに追加:</p>
-<pre><code class="lang-xml">&lt;PackageReference Include=&quot;Zamasoft.CTI&quot; Version=&quot;2.1.0&quot; /&gt;
+<pre><code class="lang-xml">&lt;PackageReference Include=&quot;Zamasoft.CTI&quot; Version=&quot;2.2.0&quot; /&gt;
 </code></pre>
+<h3 id="github-releases-のアーカイブを使う方法">GitHub Releases のアーカイブを使う方法</h3>
+<p>NuGet を使わない場合は、GitHub Releases からビルド済み zip を取得できます。</p>
+<ul>
+<li><strong>Releases</strong>: <a href="https://github.com/zamasoftnet/cti.net/releases/latest">https://github.com/zamasoftnet/cti.net/releases/latest</a></li>
+<li><strong>配布形式</strong>: <code>cti-dotnet-{VERSION}.zip</code></li>
+</ul>
+<p>zip には <code>CTI.dll</code>, <code>CTI.xml</code>, <code>README.md</code>, <code>apidoc/</code> が含まれます。展開後、<code>CTI.dll</code> をプロジェクト参照に追加して利用してください。</p>
 <h3 id="ソースからビルドする方法">ソースからビルドする方法</h3>
 <p><code>CTI/CTI.sln</code> をVisual Studio または <code>dotnet build</code> でビルドしてください。</p>
+<p>配布用 zip を生成する場合は、リポジトリルートで以下を実行してください。</p>
+<pre><code class="lang-bash">pwsh ./scripts/build-release-zip.ps1
+</code></pre>
 <h2 id="基本的な使い方">基本的な使い方</h2>
 <p>名前空間 <code>Zamasoft.CTI</code> を使用します。</p>
 <h3 id="c-の例">C# の例</h3>
@@ -225,8 +240,7 @@ CTIライブラリのソースを直接取り込んでビルドするため、�
 <pre><code class="lang-bash">cd cti.net
 dotnet run --project src/test/generate-pdfs
 </code></pre>
-<p>生成されたPDFは <code>../test-output/</code> ディレクトリに保存されます。
-Java側の <code>PdfBoxTest</code> によって全PDFの妥当性（1ページ以上あること）が検証されます。</p>
+<p>生成されたPDFは <code>build/test-output/</code> ディレクトリに保存されます。</p>
 <p>Gradleからの実行：</p>
 <pre><code class="lang-bash">./gradlew :cti-driver-ctip:generateDotNetPdfs
 </code></pre>
@@ -236,6 +250,22 @@ Java側の <code>PdfBoxTest</code> によって全PDFの妥当性（1ページ�
 <h2 id="オンラインマニュアル">オンラインマニュアル</h2>
 <p><a href="http://dl.cssj.jp/docs/copper/3.0/html/3423_ctip2_dotnet.html">http://dl.cssj.jp/docs/copper/3.0/html/3423_ctip2_dotnet.html</a></p>
 <h2 id="変更履歴">変更履歴</h2>
+<h3 id="v220-2026910">v2.2.0 (2026/9/10)</h3>
+<ul>
+<li><strong><code>ctips:</code> でサーバー証明書を実際に検証するようにしました。</strong>
+従来は検証結果に関わらず必ず受け入れており、自己署名の証明書でも
+名前の違う証明書でも素通りしていました。TLS を張っていても、
+経路上の第三者に成り済まされる状態でした。</li>
+<li><strong>互換性に関する注意</strong>: 自己署名の証明書を使う試験サーバーへ
+繋いでいた場合、このバージョンからは接続が拒否されます。
+接続先の URI に <code>?insecure=1</code> を付けると従来どおり素通しします
+（本番では使わないでください）。</li>
+</ul>
+<h3 id="v211-202645">v2.1.1 (2026/4/5)</h3>
+<ul>
+<li>GitHub Releases 向けの配布 zip を自動生成するようにしました。</li>
+<li>NuGet Trusted Publishing と GitHub Release の手順を整理しました。</li>
+</ul>
 <h3 id="v210-202639">v2.1.0 (2026/3/9)</h3>
 <ul>
 <li>.NET Framework 4.0 から .NET Standard 2.0 に移行（.NET 5–9 / Linux / macOS 対応）。</li>
@@ -265,7 +295,7 @@ Java側の <code>PdfBoxTest</code> によって全PDFの妥当性（1ページ�
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/zamasoftnet/cti.net/blob/main/README.md/#L1" class="contribution-link">Edit this page</a>
+                    <a href="https://github.com/zamasoftnet/cti.net/blob/v2.2.0/README.md/#L1" class="contribution-link">Edit this page</a>
                   </li>
                 </ul>
               </div>
