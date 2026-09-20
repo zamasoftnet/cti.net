@@ -346,7 +346,17 @@ namespace Zamasoft.CTI.Impl
 
         private void writeAll(byte[] buffer, int len)
         {
-           this.stream.Write(buffer, 0, len);
+            if (len <= 0)
+            {
+                // **長さ 0 は送らない。**平文の TCP では無害だが、Windows の SslStream(SChannel)は
+                // TLS 1.3 で長さ 0 の Write を「content type の無いレコード」として送り、
+                // Java のサーバー(Copper PDF 3.2 の TLS 待受、JDK 11)が
+                // 「Incorrect inner plaintext: no content type」で接続を切る。encoding を
+                // 省略した START_MAIN / START_RESOURCE の空文字列で毎回起きていた
+                // (2026-09-20 に 3.2.33 の TLS 待受で実測。TLS 1.2 と Go の TLS(cti.li)では起きない)。
+                return;
+            }
+            this.stream.Write(buffer, 0, len);
         }
 
         private void writeAll(byte[] buffer)

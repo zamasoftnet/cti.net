@@ -387,6 +387,9 @@ namespace Zamasoft.CTI.Impl
             this.buildThread.Start();
         }
 
+        /// <summary>受信スレッドで起きた例外。呼び出し側の <see cref="next"/> で投げ直す。</summary>
+        private Exception buildError;
+
         internal void buildTask()
         {
             try
@@ -399,6 +402,12 @@ namespace Zamasoft.CTI.Impl
             catch (ThreadInterruptedException)
             {
                 // cancelled by Reset()
+            }
+            catch (Exception e)
+            {
+                // 受信スレッドで投げっぱなしにすると未処理例外でプロセスごと落ちる
+                // (2026-09-20、TLS の復号エラーで実測)。控えて、待ち合わせる側へ渡す
+                this.buildError = e;
             }
             finally
             {
@@ -416,6 +425,12 @@ namespace Zamasoft.CTI.Impl
                 else
                 {
                     this.buildTask();
+                }
+                Exception error = this.buildError;
+                if (error != null)
+                {
+                    this.buildError = null;
+                    throw new System.IO.IOException("変換結果の受信に失敗しました: " + error.Message, error);
                 }
 		    } finally {
  			    this.state = 1;

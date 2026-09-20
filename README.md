@@ -24,7 +24,7 @@ dotnet add package Zamasoft.CTI
 または `PackageReference` をプロジェクトファイルに追加:
 
 ```xml
-<PackageReference Include="Zamasoft.CTI" Version="2.2.0" />
+<PackageReference Include="Zamasoft.CTI" Version="2.2.1" />
 ```
 
 ### GitHub Releases のアーカイブを使う方法
@@ -148,6 +148,16 @@ Copyright (c) 2011-2015 Zamasoft
 http://dl.cssj.jp/docs/copper/3.0/html/3423_ctip2_dotnet.html
 
 ## 変更履歴
+
+### v2.2.1 (2026/9/20)
+
+- **Copper PDF 3.2 の TLS 待受(JDK)に `ctips:` で繋ぐと、変換の途中で
+  「The decryption operation failed」になっていたのを修正しました。**Windows の
+  SslStream は長さ 0 の書き込みを TLS 1.3 では content type の無いレコードとして
+  送り、Java のサーバーがそれを拒否していました(encoding を省略した変換要求で毎回)。
+  長さ 0 は送りません。TLS 1.2 と、Go の TLS で終端する cti.li では起きていませんでした。
+- 受信スレッドの例外で**プロセスごと落ちていた**のをやめ、`Join()` 側で
+  `IOException` として投げ直すようにしました。
 
 ### v2.2.0 (2026/9/10)
 
