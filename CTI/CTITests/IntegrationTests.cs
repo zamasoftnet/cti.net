@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Net.Sockets;
 using Xunit;
+using Xunit.Abstractions;
 using Zamasoft.CTI;
 using Zamasoft.CTI.Progress;
 using Zamasoft.CTI.Result;
@@ -17,8 +18,24 @@ namespace CTITests
     /// </summary>
     public class IntegrationTests
     {
-        private static readonly Uri ServerUri = new Uri(
-            Environment.GetEnvironmentVariable("CTI_SERVER_URI") ?? "ctip://cti.li/");
+        // 接続試験マトリクスの共通契約(copperpdf4/docs/design/2026-09-20-cti-driver-tls-test-matrix-design.md §2):
+        // CTI_TLS_INSECURE=1 で証明書を検証しない(URI に ?insecure=1 を付ける)、
+        // CTI_EXPECT_REJECT=1 で「証明書の検証で拒否されること」だけを試験する(Test10 を --filter で選ぶ)
+        private static readonly bool Insecure = Environment.GetEnvironmentVariable("CTI_TLS_INSECURE") == "1";
+        private static readonly bool ExpectReject = Environment.GetEnvironmentVariable("CTI_EXPECT_REJECT") == "1";
+        private static readonly Uri ServerUri = ResolveServerUri();
+
+        private static Uri ResolveServerUri()
+        {
+            string raw = Environment.GetEnvironmentVariable("CTI_SERVER_URI") ?? "ctip://cti.li/";
+            if (Insecure && ExpectReject)
+                throw new InvalidOperationException("CTI_TLS_INSECURE=1 と CTI_EXPECT_REJECT=1 は同時に指定できません");
+            if (raw.Contains("insecure"))
+                throw new InvalidOperationException("CTI_SERVER_URI に insecure を含めず、CTI_TLS_INSECURE=1 で指定してください");
+            if (Insecure)
+                raw = raw + (raw.Contains("?") ? "&" : "?") + "insecure=1";
+            return new Uri(raw);
+        }
         private static readonly string User =
             Environment.GetEnvironmentVariable("CTI_TEST_USER") ?? "user";
         private static readonly string Password =
@@ -75,18 +92,24 @@ namespace CTITests
 
         private bool EnsureServer()
         {
-            if (!ServerAvailable)
-            {
-                int port = ServerUri.Port > 0 ? ServerUri.Port : 8099;
-                Console.WriteLine("SKIP: Copper PDF サーバー (" + ServerUri.Host + ":" + port + ") に接続できません。");
-                return false;
-            }
+            // 到達不能は失敗(黙って成功にしない。2026-09-20、マトリクスの契約)
+            int port = ServerUri.Port > 0 ? ServerUri.Port : 8099;
+            Assert.True(ServerAvailable, "Copper PDF サーバー (" + ServerUri.Host + ":" + port + ") に接続できません。");
             return true;
         }
 
         static IntegrationTests()
         {
             Directory.CreateDirectory(OutDir);
+        }
+
+        // 試験の出力(CTI-MATRIX の行)は xUnit の ITestOutputHelper 経由でしか残らない。
+        // dotnet test --logger "console;verbosity=detailed" で見える
+        private readonly ITestOutputHelper _output;
+
+        public IntegrationTests(ITestOutputHelper output)
+        {
+            _output = output;
         }
 
         [Fact]
@@ -242,14 +265,38 @@ namespace CTITests
             }
             catch { reachable = false; }
 
-            if (!reachable)
-            {
-                Console.WriteLine("SKIP: サーバーに接続できないため認証テストをスキップします。");
-                return;
-            }
+            Assert.True(reachable, "サーバーに接続できません。");
 
             Assert.Throws<IOException>(() =>
                 DriverManager.getSession(ServerUri, "invalid-user", "invalid-password"));
+        }
+
+        /// <summary>
+        /// 拒否試験(tls-reject / tls-badname)。CTI_EXPECT_REJECT=1 のときは、接続が
+        /// 証明書の検証で拒否されることだけを確かめる(変換まで進む・接続拒否・認証失敗は
+        /// 成功に数えない)。通常のときは、接続が拒否されないことを確かめる。
+        /// </summary>
+        [Fact]
+        public void Test10_CertificateVerification()
+        {
+            if (!ExpectReject)
+            {
+                EnsureServer();
+                using (var session = CreateSession())
+                {
+                    Assert.NotNull(session.GetServerInfo("http://www.cssj.jp/ns/ctip/version"));
+                }
+                return;
+            }
+            var error = Assert.Throws<System.Security.Authentication.AuthenticationException>(() =>
+            {
+                using (var session = CreateSession())
+                {
+                    session.GetServerInfo("http://www.cssj.jp/ns/ctip/version");
+                }
+            });
+            _output.WriteLine("CTI-MATRIX reject: " + error.Message);
+            Assert.Contains("certificate", error.Message, StringComparison.OrdinalIgnoreCase);
         }
 
         // ヘルパークラス
