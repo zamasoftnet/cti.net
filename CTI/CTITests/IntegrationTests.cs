@@ -254,6 +254,142 @@ namespace CTITests
             AssertPdf(out2);
         }
 
+        // ---- プロトコルの周辺機能(2026-09-20、接続試験マトリクスの拡張)。
+        // 主要機能の 8 項目に、メッセージ受信・中断・ストリーム出力・連続結合を足す。7 本のドライバで同じ 4 項目。
+
+        private const string MissingCssHtml = "<html><head><link rel=\"stylesheet\" href=\"missing.css\"></head><body><p>message test</p></body></html>";
+
+        private static byte[] BigHtml(int paragraphs)
+        {
+            var sb = new System.Text.StringBuilder("<html><body>");
+            string filler = new string('x', 300);
+            for (int i = 0; i < paragraphs; i++) sb.Append("<p>paragraph ").Append(i).Append(' ').Append(filler).Append("</p>");
+            sb.Append("</body></html>");
+            return System.Text.Encoding.UTF8.GetBytes(sb.ToString());
+        }
+
+        private static void TranscodeBytes(Session session, byte[] html)
+        {
+            session.Transcode(new SourceInfo(".", "text/html", "UTF-8", html.Length), new MemoryStream(html));
+        }
+
+        private sealed class CollectingMessageHandler : Zamasoft.CTI.Message.MessageHandler
+        {
+            public readonly List<(short code, string[] args, string mes)> Messages = new List<(short, string[], string)>();
+            public void Message(short code, string[] args, string mes) { Messages.Add((code, args ?? new string[0], mes ?? "")); }
+        }
+
+        private static void AssertPdfBytes(byte[] bytes, string what)
+        {
+            Assert.True(bytes.Length >= 4 && bytes[0] == 0x25 && bytes[1] == 0x50 && bytes[2] == 0x44 && bytes[3] == 0x46, what + ": PDF でない");
+        }
+
+        [Fact]
+        public void Test11_MessageCallback()
+        {
+            // 存在しないスタイルシートを参照する文書を変換し、サーバーのエラーメッセージがハンドラに届く(引数にその名前が入る)
+            if (!EnsureServer()) return;
+            var handler = new CollectingMessageHandler();
+            var buf = new MemoryStream();
+            using (Session session = CreateSession())
+            {
+                session.MessageHandler = handler;
+                Utils.SetResultStream(session, buf);
+                TranscodeBytes(session, System.Text.Encoding.UTF8.GetBytes(MissingCssHtml));
+            }
+            AssertPdfBytes(buf.ToArray(), "message test");
+            var hits = handler.Messages.FindAll(m => Array.IndexOf(m.args, "missing.css") >= 0 || m.mes.Contains("missing.css"));
+            Assert.True(hits.Count > 0, "missing.css についてのメッセージが届いていない: " + string.Join(" | ", handler.Messages.ConvertAll(m => m.code + " " + m.mes)));
+            foreach (var m in hits) Assert.True(m.code > 0);
+        }
+
+        [Fact]
+        public void Test12_Abort()
+        {
+            // 本文の送信中に Abort を送ると変換が止まり(完全な出力が返らない)、Reset 後に同じセッションで再変換できる。
+            // サーバーが中断をどのメッセージで報告するかは版で違うので見ない
+            if (!EnsureServer()) return;
+            byte[] html = BigHtml(3000);
+            using (Session session = CreateSession())
+            {
+                var full = new MemoryStream();
+                Utils.SetResultStream(session, full);
+                TranscodeBytes(session, html);
+                AssertPdfBytes(full.ToArray(), "full");
+                session.Reset();
+
+                var aborted = new MemoryStream();
+                Utils.SetResultStream(session, aborted);
+                int half = html.Length / 2;
+                try
+                {
+                    using (Stream outStream = session.Transcode(new SourceInfo(".", "text/html", "UTF-8", html.Length)))
+                    {
+                        outStream.Write(html, 0, half);
+                        outStream.Flush();
+                        session.Abort(AbortMode.FORCE);
+                        outStream.Write(html, half, html.Length - half);
+                    }
+                }
+                catch (IOException e)
+                {
+                    // 中断がサーバーのエラー報告として届き、ドライバが例外にする版がある(3.2.33)。中断の報告としては正しい
+                    _output.WriteLine("abort reported as: " + e.Message);
+                }
+                Assert.True(aborted.ToArray().Length < full.ToArray().Length, "中断したのに完全な出力が返った");
+                session.Reset();
+
+                var again = new MemoryStream();
+                Utils.SetResultStream(session, again);
+                TranscodeBytes(session, System.Text.Encoding.UTF8.GetBytes("<p>after abort</p>"));
+                AssertPdfBytes(again.ToArray(), "after abort");
+            }
+        }
+
+        [Fact]
+        public void Test13_OutputStream()
+        {
+            // SetResultStream(SingleResult(Stream))で結果がストリームに書かれる
+            if (!EnsureServer()) return;
+            var buf = new MemoryStream();
+            using (Session session = CreateSession())
+            {
+                Utils.SetResultStream(session, buf);
+                session.Resource(
+                    new SourceInfo("test.css", "text/css", null, new FileInfo(Path.Combine(DataDir, "test.css")).Length),
+                    new FileStream(Path.Combine(DataDir, "test.css"), FileMode.Open, FileAccess.Read));
+                session.Transcode(
+                    new SourceInfo("test.html", "text/html", null, new FileInfo(Path.Combine(DataDir, "test.html")).Length),
+                    new FileStream(Path.Combine(DataDir, "test.html"), FileMode.Open, FileAccess.Read));
+            }
+            AssertPdfBytes(buf.ToArray(), "stream");
+            Assert.True(buf.ToArray().Length > 100);
+        }
+
+        [Fact]
+        public void Test14_ContinuousJoin()
+        {
+            // 連続モードで 2 文書を変換して Join すると 1 つの PDF になる(1 文書より大きい)
+            if (!EnsureServer()) return;
+            var single = new MemoryStream();
+            using (Session session = CreateSession())
+            {
+                Utils.SetResultStream(session, single);
+                TranscodeBytes(session, System.Text.Encoding.UTF8.GetBytes("<p>doc 0</p>"));
+            }
+            var joined = new MemoryStream();
+            using (Session session = CreateSession())
+            {
+                Utils.SetResultStream(session, joined);
+                session.Continuous = true;
+                for (int i = 0; i < 2; i++)
+                    TranscodeBytes(session, System.Text.Encoding.UTF8.GetBytes("<p>doc " + i + "</p>"));
+                session.Join();
+            }
+            AssertPdfBytes(joined.ToArray(), "joined");
+            Assert.True(joined.ToArray().Length > single.ToArray().Length, "結合した出力が 1 文書より大きくない");
+        }
+
         [Fact]
         public void Test09_AuthenticationFailure()
         {
