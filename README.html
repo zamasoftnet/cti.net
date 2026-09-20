@@ -63,7 +63,7 @@
 <h1 id="cti-driver-for-net">CTI Driver for .NET</h1>
 
 <p>Copper PDF 文書変換サーバーに接続するための.NETドライバ（C#, VB.NET等）</p>
-<p>バージョン: 2.2.0</p>
+<p>バージョン: 2.2.1</p>
 <h2 id="api-ドキュメント">API ドキュメント</h2>
 <ul>
 <li><strong>オンライン</strong>: <a href="https://zamasoftnet.github.io/cti.net/">https://zamasoftnet.github.io/cti.net/</a></li>
@@ -78,7 +78,7 @@
 <pre><code class="lang-bash">dotnet add package Zamasoft.CTI
 </code></pre>
 <p>または <code>PackageReference</code> をプロジェクトファイルに追加:</p>
-<pre><code class="lang-xml">&lt;PackageReference Include=&quot;Zamasoft.CTI&quot; Version=&quot;2.2.0&quot; /&gt;
+<pre><code class="lang-xml">&lt;PackageReference Include=&quot;Zamasoft.CTI&quot; Version=&quot;2.2.1&quot; /&gt;
 </code></pre>
 <h3 id="github-releases-のアーカイブを使う方法">GitHub Releases のアーカイブを使う方法</h3>
 <p>NuGet を使わない場合は、GitHub Releases からビルド済み zip を取得できます。</p>
@@ -250,6 +250,16 @@ dotnet run --project src/test/generate-pdfs
 <h2 id="オンラインマニュアル">オンラインマニュアル</h2>
 <p><a href="http://dl.cssj.jp/docs/copper/3.0/html/3423_ctip2_dotnet.html">http://dl.cssj.jp/docs/copper/3.0/html/3423_ctip2_dotnet.html</a></p>
 <h2 id="変更履歴">変更履歴</h2>
+<h3 id="v221-2026920">v2.2.1 (2026/9/20)</h3>
+<ul>
+<li>**Copper PDF 3.2 の TLS 待受(JDK)に <code>ctips:</code> で繋ぐと、変換の途中で
+「The decryption operation failed」になっていたのを修正しました。**Windows の
+SslStream は長さ 0 の書き込みを TLS 1.3 では content type の無いレコードとして
+送り、Java のサーバーがそれを拒否していました(encoding を省略した変換要求で毎回)。
+長さ 0 は送りません。TLS 1.2 と、Go の TLS で終端する cti.li では起きていませんでした。</li>
+<li>受信スレッドの例外で<strong>プロセスごと落ちていた</strong>のをやめ、<code>Join()</code> 側で
+<code>IOException</code> として投げ直すようにしました。</li>
+</ul>
 <h3 id="v220-2026910">v2.2.0 (2026/9/10)</h3>
 <ul>
 <li><strong><code>ctips:</code> でサーバー証明書を実際に検証するようにしました。</strong>
@@ -295,7 +305,7 @@ dotnet run --project src/test/generate-pdfs
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/zamasoftnet/cti.net/blob/v2.2.0/README.md/#L1" class="contribution-link">Edit this page</a>
+                    <a href="https://github.com/zamasoftnet/cti.net/blob/v2.2.1/README.md/#L1" class="contribution-link">Edit this page</a>
                   </li>
                 </ul>
               </div>
