@@ -218,6 +218,7 @@ namespace Zamasoft.CTI.Impl
                 port = 8099;
             }
             bool insecure = false;
+            string caFile = null;
             this.tcp = new TcpClient(host, port);
  
             if (this.serverUri.Query != null && this.serverUri.Query.Length >= 1)
@@ -235,6 +236,12 @@ namespace Zamasoft.CTI.Impl
                         // 逃げ道で、本番で使うと相手が誰かを確かめないまま話すことになる。
                         insecure = pair.Length > 1 && (pair[1] == "1" || pair[1].ToLowerInvariant() == "true");
                     }
+                    else if (pair[0] == "cafile" && pair.Length > 1)
+                    {
+                        // 独自の認証局(または自己署名のサーバー証明書そのもの)の PEM/DER ファイル。
+                        // Windows のストアに登録せずに信頼させる(2.2.2)
+                        caFile = System.Uri.UnescapeDataString(pair[1]);
+                    }
                 }
             }
 
@@ -245,7 +252,9 @@ namespace Zamasoft.CTI.Impl
                 // 検証もこの名前に対して行われる。
                 SslStream sslStream = insecure
                     ? new SslStream(tcpStream, false, AcceptAnyCertificate)
-                    : new SslStream(tcpStream, false);
+                    : caFile != null
+                        ? new SslStream(tcpStream, false, TrustCaFile(caFile))
+                        : new SslStream(tcpStream, false);
                 sslStream.AuthenticateAsClient(host);
                 this.stream = sslStream;
             }
@@ -285,6 +294,50 @@ namespace Zamasoft.CTI.Impl
         )
         {
             return true;
+        }
+
+        /// <summary>
+        /// 指定したファイルの証明書を根として検証するコールバックを返します。
+        ///
+        /// <para>
+        /// 接続先の URI に <c>?cafile=パス</c> が付いているときに使います。標準の検証は
+        /// OS のストアしか見ないので、独自の認証局や自己署名の証明書を使うには
+        /// ストアへの登録(Windows では確認ダイアログが要る)が必要でした。
+        /// Java の trustStore、Ruby/Perl/Python の <c>SSL_CERT_FILE</c> に相当します。
+        /// </para>
+        ///
+        /// <para>
+        /// 検証の中身: ホスト名の不一致はそのまま拒否。鎖の誤りは、ファイルの証明書を
+        /// 追加ストアに入れて鎖を組み直し、根がその証明書と一致するときだけ受け入れる
+        /// (netstandard2.0 には CustomRootTrust が無いので、根の指紋で確かめる)。
+        /// OS のストアで既に信頼されている相手は従来どおり受け入れます。
+        /// </para>
+        /// </summary>
+        private static RemoteCertificateValidationCallback TrustCaFile(string path)
+        {
+            X509Certificate2 ca = new X509Certificate2(path);
+            return (sender, certificate, chain, sslPolicyErrors) =>
+            {
+                if (sslPolicyErrors == SslPolicyErrors.None)
+                {
+                    return true;
+                }
+                if ((sslPolicyErrors & ~SslPolicyErrors.RemoteCertificateChainErrors) != 0)
+                {
+                    // 名前の不一致・証明書なしは救わない
+                    return false;
+                }
+                X509Chain rebuilt = new X509Chain();
+                rebuilt.ChainPolicy.ExtraStore.Add(ca);
+                rebuilt.ChainPolicy.VerificationFlags = X509VerificationFlags.AllowUnknownCertificateAuthority;
+                rebuilt.ChainPolicy.RevocationMode = X509RevocationMode.NoCheck;
+                if (!rebuilt.Build(new X509Certificate2(certificate)))
+                {
+                    return false;
+                }
+                X509Certificate2 root = rebuilt.ChainElements[rebuilt.ChainElements.Count - 1].Certificate;
+                return string.Equals(root.Thumbprint, ca.Thumbprint, StringComparison.OrdinalIgnoreCase);
+            };
         }
 
         internal int read(byte[] b, int off, int len)

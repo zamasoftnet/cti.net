@@ -34,6 +34,11 @@ namespace CTITests
                 throw new InvalidOperationException("CTI_SERVER_URI に insecure を含めず、CTI_TLS_INSECURE=1 で指定してください");
             if (Insecure)
                 raw = raw + (raw.Contains("?") ? "&" : "?") + "insecure=1";
+            // CTI_TLS_CA_FILE: 独自の認証局(自己署名の試験サーバー)を ?cafile= で信頼させる(2.2.2)。
+            // 他言語版の SSL_CERT_FILE に相当。OS のストアには触らない
+            string caFile = Environment.GetEnvironmentVariable("CTI_TLS_CA_FILE");
+            if (!string.IsNullOrEmpty(caFile) && !Insecure)
+                raw = raw + (raw.Contains("?") ? "&" : "?") + "cafile=" + Uri.EscapeDataString(caFile);
             return new Uri(raw);
         }
         private static readonly string User =

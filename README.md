@@ -2,7 +2,7 @@
 
 Copper PDF 文書変換サーバーに接続するための.NETドライバ（C#, VB.NET等）
 
-バージョン: 2.2.1
+バージョン: 2.2.2
 
 ## API ドキュメント
 
@@ -24,7 +24,7 @@ dotnet add package Zamasoft.CTI
 または `PackageReference` をプロジェクトファイルに追加:
 
 ```xml
-<PackageReference Include="Zamasoft.CTI" Version="2.2.1" />
+<PackageReference Include="Zamasoft.CTI" Version="2.2.2" />
 ```
 
 ### GitHub Releases のアーカイブを使う方法
@@ -80,6 +80,19 @@ Using session As Session = DriverManager.getSession(
     Utils.TranscodeFile(session, "test.html", "text/html", Nothing)
 End Using
 ```
+
+## TLS 接続
+
+`ctips://` で接続すると、サーバー証明書を OS の証明書ストアで検証し、ホスト名も照合します。
+自己署名や独自の認証局の証明書は、接続先の URI に `?cafile=` で証明書ファイル(PEM か DER)を
+指定すると、ストアに登録せずに信頼させられます(2.2.2 以降。Java の trustStore、
+Ruby/Perl/Python の `SSL_CERT_FILE` に相当)。ホスト名の照合はそのまま行われます。
+
+```
+ctips://localhost:8094/?cafile=C%3A%5Ccerts%5Cserver.pem
+```
+
+試験用に検証を省くには `?insecure=1` を付けます(証明書もホスト名も確かめないので、本番では使わないでください)。
 
 ## API概要
 
@@ -148,6 +161,13 @@ Copyright (c) 2011-2015 Zamasoft
 http://dl.cssj.jp/docs/copper/3.0/html/3423_ctip2_dotnet.html
 
 ## 変更履歴
+
+### v2.2.2 (2026/9/20)
+
+- 接続先の URI に `?cafile=証明書ファイル` を付けると、その証明書を根として
+  サーバー証明書を検証するようにしました。独自の認証局や自己署名の証明書を、
+  OS のストアに登録せず(Windows では登録に確認ダイアログが要ります)に信頼させられます。
+  ホスト名の不一致は従来どおり拒否します。
 
 ### v2.2.1 (2026/9/20)
 
