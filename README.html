@@ -63,7 +63,7 @@
 <h1 id="cti-driver-for-net">CTI Driver for .NET</h1>
 
 <p>Copper PDF 文書変換サーバーに接続するための.NETドライバ（C#, VB.NET等）</p>
-<p>バージョン: 2.2.1</p>
+<p>バージョン: 2.2.2</p>
 <h2 id="api-ドキュメント">API ドキュメント</h2>
 <ul>
 <li><strong>オンライン</strong>: <a href="https://zamasoftnet.github.io/cti.net/">https://zamasoftnet.github.io/cti.net/</a></li>
@@ -78,7 +78,7 @@
 <pre><code class="lang-bash">dotnet add package Zamasoft.CTI
 </code></pre>
 <p>または <code>PackageReference</code> をプロジェクトファイルに追加:</p>
-<pre><code class="lang-xml">&lt;PackageReference Include=&quot;Zamasoft.CTI&quot; Version=&quot;2.2.1&quot; /&gt;
+<pre><code class="lang-xml">&lt;PackageReference Include=&quot;Zamasoft.CTI&quot; Version=&quot;2.2.2&quot; /&gt;
 </code></pre>
 <h3 id="github-releases-のアーカイブを使う方法">GitHub Releases のアーカイブを使う方法</h3>
 <p>NuGet を使わない場合は、GitHub Releases からビルド済み zip を取得できます。</p>
@@ -119,6 +119,14 @@ Using session As Session = DriverManager.getSession(
     Utils.TranscodeFile(session, &quot;test.html&quot;, &quot;text/html&quot;, Nothing)
 End Using
 </code></pre>
+<h2 id="tls-接続">TLS 接続</h2>
+<p><code>ctips://</code> で接続すると、サーバー証明書を OS の証明書ストアで検証し、ホスト名も照合します。
+自己署名や独自の認証局の証明書は、接続先の URI に <code>?cafile=</code> で証明書ファイル(PEM か DER)を
+指定すると、ストアに登録せずに信頼させられます(2.2.2 以降。Java の trustStore、
+Ruby/Perl/Python の <code>SSL_CERT_FILE</code> に相当)。ホスト名の照合はそのまま行われます。</p>
+<pre><code>ctips://localhost:8094/?cafile=C%3A%5Ccerts%5Cserver.pem
+</code></pre>
+<p>試験用に検証を省くには <code>?insecure=1</code> を付けます(証明書もホスト名も確かめないので、本番では使わないでください)。</p>
 <h2 id="api概要">API概要</h2>
 <h3 id="session-インターフェース">Session インターフェース</h3>
 <table>
@@ -250,6 +258,13 @@ dotnet run --project src/test/generate-pdfs
 <h2 id="オンラインマニュアル">オンラインマニュアル</h2>
 <p><a href="http://dl.cssj.jp/docs/copper/3.0/html/3423_ctip2_dotnet.html">http://dl.cssj.jp/docs/copper/3.0/html/3423_ctip2_dotnet.html</a></p>
 <h2 id="変更履歴">変更履歴</h2>
+<h3 id="v222-2026920">v2.2.2 (2026/9/20)</h3>
+<ul>
+<li>接続先の URI に <code>?cafile=証明書ファイル</code> を付けると、その証明書を根として
+サーバー証明書を検証するようにしました。独自の認証局や自己署名の証明書を、
+OS のストアに登録せず(Windows では登録に確認ダイアログが要ります)に信頼させられます。
+ホスト名の不一致は従来どおり拒否します。</li>
+</ul>
 <h3 id="v221-2026920">v2.2.1 (2026/9/20)</h3>
 <ul>
 <li>**Copper PDF 3.2 の TLS 待受(JDK)に <code>ctips:</code> で繋ぐと、変換の途中で
@@ -305,7 +320,7 @@ SslStream は長さ 0 の書き込みを TLS 1.3 では content type の無い�
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/zamasoftnet/cti.net/blob/v2.2.1/README.md/#L1" class="contribution-link">Edit this page</a>
+                    <a href="https://github.com/zamasoftnet/cti.net/blob/v2.2.2/README.md/#L1" class="contribution-link">Edit this page</a>
                   </li>
                 </ul>
               </div>
